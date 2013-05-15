@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">版本 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">美术设计 Jozef Kruszynski</string>
+    <string name="menu_settings">设定</string>
+    <string name="cbox_boot_all">设定开机时启动</string>
+    <string name="cbox_boot_card">开机时启动</string>
+    <string name="cbox_monitor_all">监控所有的设备</string>
+    <string name="cbox_monitor_card">监控目前的设备</string>
+    <string name="cbox_size_all">高速缓存大小:</string>
+    <string name="card_part_label">大小:</string>
+    <string name="card_cache_label">高速缓存:</string>
+    <string name="card_size_label">虚拟</string>
+    <string name="msg_error_no_card">未发现记忆卡</string>
+    <string name="msg_error_no_root">SD-Booster没有成功取得root权限</string>
+    <string name="msg_error_no_setup">未发现高速缓存.请重新设定</string>
+    <string name="msg_error_no_card_list">未发现记忆卡!</string>
+    <string name="msg_all_ok">所有的高速缓存已成功更新</string>
+    <string name="msg_box_override_enable">此选项会覆写记忆卡的默认值</string>
+    <string name="msg_box_override_disable">关闭</string>
+    <string name="msg_kernel_cache_p1">设定高速缓存大小</string>
+    <string name="msg_kernel_cache_p2">到</string>
+    <string name="msg_kernel_cache_p3">成功</string>
+    <string name="msg_kernel_cache_p4">失败</string>
+    <string name="msg_kernel_device_skip_p1">设备</string>
+    <string name="msg_kernel_device_skip_p2">忽略跳过</string>
+    <string name="msg_service_start">启动服务</string>
+    <string name="msg_service_stop">关闭服务</string>
+    <string name="msg_service_ticker_new">侦测到新设备.请重新设定你的记忆卡</string>
+    <string name="msg_service_ticker_monitor_p1">设备</string>
+    <string name="msg_service_ticker_monitor_p2">设定成功</string>
+    <string name="msg_service_ticker_value_p1">设备</string>
+    <string name="msg_service_ticker_value_p2">不在名单内</string>
+    <string name="msg_new_card">发现新设备并且不在监控名单内</string>
+    <string name="edit_hint_label">KB</string>
+    <string name="dlg_license_label">授权条款</string>
+    <string name="dlg_license_text">SD-Booster不负责任何可能造成的风险损害.\nSD-Booster需要或得root权限才能运行!\n请按OK选择接受或cancel取消离开</string>
+    <string name="dlg_info_label">信息</string>
+    <string name="dlg_test_no_mount">无法安装SD-Card</string>
+    <string name="dlg_card_info_name_label">名称:</string>
+    <string name="dlg_card_info_part_label">大小:</string>
+    <string name="dlg_card_info_cache_label">高速缓存:</string>
+    <string name="dlg_card_info_date_label">日期:</string>
+    <string name="dlg_card_info_serial_label">序号:</string>
+    <string name="dlg_card_info_unknown_label">未知</string>
+    <string name="dlg_setup_label">设定</string>
+    <string name="dlg_setup_name_label">名称:</string>
+    <string name="dlg_setup_cache_label">高速缓存大小 (目前/使用):</string>
+    <string name="dlg_setup_cache_edit_label">高速缓存大小:</string>
+    <string name="dlg_setup_cache_size_error">请将高速缓存大小设定在128和8192之间</string>
+    <string name="dlg_setup_text">请将高速缓存大小设定在128和8192之间.建议值为 512, 1024 或 2048</string>
+    <string name="dlg_progress_label">速度测试</string>
+    <string name="dlg_progress_text">测试中.请稍候&#8230;</string>
+    <string name="dlg_preference_label">参数</string>
+    <string name="dlg_preference_store">储存参数</string>
+    <string name="dlg_preference_background">背景更新和通知</string>
+    <string name="dlg_preference_interval">更新频率(小时):</string>
+    <string name="dlg_preference_note_boot">开机时通知</string>
+    <string name="dlg_preference_note_monitor">监控时通知</string>
+    <string name="dlg_preference_note_change">状态改变时通知</string>
+    <string name="dlg_preference_note_alarm">当有通知讯息时启动警示铃声</string>
+    <string name="dlg_preference_note_ringtone">选择铃声:</string>
+</resources>

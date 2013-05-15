@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+   <string name="app_name">SD-Booster</string>
+   <string name="app_author">Verzija 2.0.3 © Daniel Mehrmann</string>
+   <string name="app_design">Icons by Jozef Kruszynski</string>
+   <string name="menu_settings">Podesavanja</string>
+   <string name="cbox_boot_all">Postavi sve uredjaje pri pokretanju sistema</string>
+   <string name="cbox_boot_card">Postavi ovaj uredjaj pri pokretanju sistema</string>
+   <string name="cbox_monitor_all">Prati sve uredjaje</string>
+   <string name="cbox_monitor_card">Prati ovaj uredjaj</string>
+   <string name="cbox_size_all">Kes za sve uredjaje:</string>
+   <string name="card_part_label">Velicina:</string>
+   <string name="card_cache_label">Kes:</string>
+   <string name="msg_error_no_card">Nema kartice za upravljanje</string>
+   <string name="msg_error_no_root">SD-Booster nema root dozvolu</string>
+   <string name="msg_error_no_setup">Kes vrednost nije pronadjena. Molimo postavite svoje uredjaje</string>
+   <string name="msg_error_no_card_list">Kartice nisu nadjene!</string>
+   <string name="msg_all_ok">Sve kes vrednosti su uspesno azurirane</string>
+   <string name="msg_box_override_enable">Ova opcija zamenjuje postavku kartice</string>
+   <string name="msg_box_override_disable">Funkcija onemogucena</string>
+   <string name="msg_kernel_cache_p1">Postavi kes za uredjaj</string>
+   <string name="msg_kernel_cache_p2">do</string>
+   <string name="msg_kernel_cache_p3">uspesno uradjeno</string>
+   <string name="msg_kernel_cache_p4">neuspelo</string>
+   <string name="msg_kernel_device_skip_p1">Uredjaji</string>
+   <string name="msg_kernel_device_skip_p2">bice preskoceno</string>
+   <string name="msg_service_start">Servis je poceo</string>
+   <string name="msg_service_stop">Servis je zaustavljen</string>
+   <string name="msg_service_ticker_new">Novi uredjaj otkriven. Molim postavite svoje kartice</string>
+   <string name="msg_service_ticker_monitor_p1">Uredjaj</string>
+   <string name="msg_service_ticker_monitor_p2">uspesno podeseno na</string>
+   <string name="msg_service_ticker_value_p1">Uredjaj</string>
+   <string name="msg_service_ticker_value_p2">nije sredjen</string>
+   <string name="msg_new_card">je nov uredjaj i trenutno nije sredjen</string>
+   <string name="edit_hint_label">KB</string>
+   <string name="dlg_license_label">Licenca</string>
+   <string name="dlg_license_text">SD-Booster nije odgovoran za bilo kakvo od ostecenja na vasem telefonu.\nSD-Booster treba root dozvolu da bi radio!\nMolim prihvatite ovo pritiskom na OK ili napustite aplikaciju na cancel.</string>
+   <string name="dlg_info_label">Info</string>
+   <string name="dlg_test_no_mount">SD-kartica nije montirana</string>
+   <string name="dlg_card_info_name_label">Ime:</string>
+   <string name="dlg_card_info_part_label">Velicina:</string>
+   <string name="dlg_card_info_cache_label">Kes:</string>
+   <string name="dlg_card_info_date_label">Datum:</string>
+   <string name="dlg_card_info_serial_label">Serijski broj:</string>
+   <string name="dlg_setup_label">Postavka</string>
+   <string name="dlg_setup_name_label">Ime:</string>
+   <string name="dlg_setup_cache_label">Kes velicina (trenutno/korisnik):</string>
+   <string name="dlg_setup_cache_edit_label">velicina kesa:</string>
+   <string name="dlg_setup_cache_size_error">Molim koristi kes vrednost izmedju 128 sve do 8192</string>
+   <string name="dlg_setup_text">Izaberi kes velicinu izmedju 128 i 8192. Dobra vrednost moze biti 512, 1024 ili 2048.</string>
+   <string name="dlg_progress_label">Test brzine</string>
+   <string name="dlg_progress_text">Test je u toku. Ovo moze potrajati neko vreme&#8230;</string>
+   <string name="dlg_preference_label">Podesavanja</string>
+   <string name="dlg_preference_store">Podesavanja sacuvana</string>
+   <string name="dlg_preference_background">Obavestenja i azuriranja u pozadini</string>
+   <string name="dlg_preference_interval">Interval azuriranja (sati):</string>
+   <string name="dlg_preference_note_boot">Obavestenje pri pokretanju sistema</string>
+   <string name="dlg_preference_note_monitor">Obavestenje na posmatranja</string>
+   <string name="dlg_preference_note_change">Obavestenje na promene stanja</string>
+   <string name="dlg_preference_note_alarm">Obavesti ako se pojavi obavestenje</string>
+   <string name="dlg_preference_note_ringtone">Izaberi zvono:</string>
+</resources>

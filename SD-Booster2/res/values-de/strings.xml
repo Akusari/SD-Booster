@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Version 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Icons by Jozef Kruszynski</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="cbox_boot_all">Alle Karten beim Systemstart setzen</string>
+    <string name="cbox_boot_card">Diese Karte beim Systemstart setzen</string>
+    <string name="cbox_monitor_all">Alle Karten überwachen</string>
+    <string name="cbox_monitor_card">Diese Karte überwachen</string>
+    <string name="cbox_size_all">Cachegröße für alle Karten:</string>
+    <string name="card_part_label">Größe:</string>
+	<string name="card_cache_label">Cache:</string>
+	<string name="card_size_label">virtuell</string>
+	<string name="msg_error_no_card">Keine Karte(n) verfügbar</string>
+	<string name="msg_error_no_root">SD-Booster hat keine Root-Berechtigung</string>
+	<string name="msg_error_no_setup">Keine Cachegröße gefunden. Bitte richten Sie ihre Karten ein.</string>
+	<string name="msg_error_no_card_list">Keine Karten gefunden!</string>
+	<string name="msg_all_ok">Alle Cachegrößen erfolgreich aktualisiert!</string>
+	<string name="msg_box_override_enable">Diese Option überschreibt die Karteneinstellungen.</string>
+	<string name="msg_box_override_disable">Option deaktiviert</string>
+	<string name="msg_box_logical">Monitor option aktiviert, aber keine Hintergrund updates aktiv!</string>
+	<string name="msg_kernel_cache_p1">Setzen der Cachegröße für das Gerät</string>
+	<string name="msg_kernel_cache_p2">auf</string>
+	<string name="msg_kernel_cache_p3">war erfolgreich </string>
+	<string name="msg_kernel_cache_p4">ist fehlgeschlagen</string>
+	<string name="msg_kernel_device_skip_p1">Karte</string>
+	<string name="msg_kernel_device_skip_p2">wird übersprungen</string>
+	<string name="msg_service_start">Dienst gestartet</string>
+	<string name="msg_service_stop">Dienst beendet</string>
+	<string name="msg_service_ticker_new">Neues Karte erkannt - Bitte richten Sie ihre Karte(n) ein</string>
+	<string name="msg_service_ticker_monitor_p1">Karte</string>
+	<string name="msg_service_ticker_monitor_p2">gesetzt erfolgreich auf</string>
+	<string name="msg_service_ticker_value_p1">Karte</string>
+	<string name="msg_service_ticker_value_p2">ist nicht konfiguriert.</string>
+	<string name="msg_new_card">ist ein neue Karte und bisher nicht konfiguriert.</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Lizenz</string>
+	<string name="dlg_license_text">SD-Booster ist nicht verantwortlich für jegliche Art von Schäden an Ihrem Gerät.\nSD-Booster benötigt Root-Berechtigungen!\nBitte akzeptieren Sie dies durch drücken des OK-Knopfes oder verlassen Sie die Anwendung mit Abbrechen.</string>
+	<string name="dlg_info_label">Info</string>
+	<string name="dlg_test_no_mount">Keine SD-Karte eingebunden</string>
+	<string name="dlg_card_info_name_label">Name:</string>
+	<string name="dlg_card_info_part_label">Größe:</string>
+	<string name="dlg_card_info_cache_label">Cache:</string>
+	<string name="dlg_card_info_date_label">Datum:</string>
+	<string name="dlg_card_info_serial_label">Serial:</string>
+	<string name="dlg_card_info_unknown_label">unbekannt</string>
+	<string name="dlg_setup_label">Einrichten</string>
+	<string name="dlg_setup_name_label">Name:</string>
+	<string name="dlg_setup_cache_label">Cachegröße (aktuell/Benutzer):</string>
+	<string name="dlg_setup_cache_edit_label">Cachegröße:</string>
+	<string name="dlg_setup_cache_size_error">Bitte verwenden Sie einen Cachewert zwischen 128 und 8192</string>
+	<string name="dlg_setup_text">Wählen Sie eine Cachegröße zwischen 128 und 8192. Ein guter Wert könnte 512, 1024 oder 2048 sein.</string>
+	<string name="dlg_progress_label">Geschwindigkeitstest</string>
+	<string name="dlg_progress_text">Der Test läuft. Dies könnte ein wenig dauern&#8230;</string>
+	<string name="dlg_preference_label">Einstellungen</string>
+	<string name="dlg_preference_store">Einstellungen gespeichert</string>
+	<string name="dlg_preference_background">Hintergrund updates und Benachrichtigungen</string>
+	<string name="dlg_preference_interval">Update intervall (hours):</string>
+	<string name="dlg_preference_note_boot">Benachrichtigung beim Systemstart</string>
+	<string name="dlg_preference_note_monitor">Benachrichtigung durch Überwachung</string>
+	<string name="dlg_preference_note_change">Benachrichtigung wenn Karte(n) wechselt</string>
+	<string name="dlg_preference_note_alarm">Alarm wenn Benachrichtigung kommt</string>
+	<string name="dlg_preference_note_ringtone">Klingelton wählen:</string>
+</resources>

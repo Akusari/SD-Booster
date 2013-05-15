@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Wersja 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Ikony stworzone przez Józefa Kruszyńskiego</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="cbox_boot_all">Ustaw przy starcie dla obu pamięci</string>
+    <string name="cbox_boot_card">Ustaw przy starcie</string>
+    <string name="cbox_monitor_all">Monitoruj wszystkie dyski</string>
+    <string name="cbox_monitor_card">Monitoruj ten dysk</string>
+    <string name="cbox_size_all">Zapamiętaj dla wszystkich dysków:</string>
+    <string name="card_part_label">Rozmiar:</string>
+	<string name="card_cache_label">Pamięć:</string>
+	<string name="card_size_label">faktyczny</string>
+	<string name="msg_error_no_card">Brak kart(y) to manage</string>
+	<string name="msg_error_no_root">SD-Booster nie ma dostępu do uprawień ROOT-a</string>
+	<string name="msg_error_no_setup">Nie odnaleziono zapamiętanych wartości. Proszę ustaw swoje urządzenie</string>
+	<string name="msg_error_no_card_list">Nie odnaleziono karty!</string>
+	<string name="msg_all_ok">Wszystkie wartości pamięci zostały poprawnie zaktualizowane</string>
+	<string name="msg_box_override_enable">Ta opcja nadpiszę ustawienia karty SD</string>
+	<string name="msg_box_override_disable">Opcja wyłączona</string>
+	<string name="msg_kernel_cache_p1">Ustaw rozmiar pamięci dla swojego urządzenia</string>
+	<string name="msg_kernel_cache_p2">do</string>
+	<string name="msg_kernel_cache_p3">powiodło się</string>
+	<string name="msg_kernel_cache_p4">niepowodzenie</string>
+	<string name="msg_kernel_device_skip_p1">Urzadzenie</string>
+	<string name="msg_kernel_device_skip_p2">będzie pomijany</string>
+	<string name="msg_service_start">Proces wystartował</string>
+	<string name="msg_service_stop">Proces zatrzymany</string>
+	<string name="msg_service_ticker_new">Wykryto nowe urzadzenie. Proszę ustaw swoje kartę</string>
+	<string name="msg_service_ticker_monitor_p1">Urządzenie</string>
+	<string name="msg_service_ticker_monitor_p2">poprawnie ustawiono</string>
+	<string name="msg_service_ticker_value_p1">Urządzenie</string>
+	<string name="msg_service_ticker_value_p2">brak kontroli</string>
+	<string name="msg_new_card">nowe urzadzenie, aktualnie nie kontrolowane</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Licencja</string>
+	<string name="dlg_license_text">SD-Booster nie jest odpowiedzialny za jakikolwiek rodzaj uszkodzeń Twojego urządzenia.\nSD-Booster potrzebuje uprawnień ROOT-a do uruchomienia!\nPotwierdź akceptację warunków uruchomienia aplikacji używając przycisku \'OK\' lub opuść tą aplikację poprzez przycisk \'Cancel\'.</string>
+	<string name="dlg_info_label">Informacja</string>
+	<string name="dlg_test_no_mount">Brak zamontowanej karty SD</string>
+	<string name="dlg_card_info_name_label">Nazwa:</string>
+	<string name="dlg_card_info_part_label">Rozmiar:</string>
+	<string name="dlg_card_info_cache_label">Pamięć:</string>
+	<string name="dlg_card_info_date_label">Data:</string>
+	<string name="dlg_card_info_serial_label">Kod:</string>
+	<string name="dlg_card_info_unknown_label">nieznany</string>
+	<string name="dlg_setup_label">Ustawienie</string>
+	<string name="dlg_setup_name_label">Nazwa:</string>
+	<string name="dlg_setup_cache_label">Rozmiar pamięci (aktualny/użytkownika):</string>
+	<string name="dlg_setup_cache_edit_label">Rozmiar pamięci:</string>
+	<string name="dlg_setup_cache_size_error">Proszę używaj wartości pamięci pomiędzy 128, aż do 8192</string>
+	<string name="dlg_setup_text">Wybierz rozmiar pamięci pomiędzy 128 i 8192. Odpowiednią wartością będzie 512, 1024 lub 2048.</string>
+	<string name="dlg_progress_label">Test prędkości</string>
+	<string name="dlg_progress_text">Uruchomiono test. To może chwilę potrwać&#8230;</string>
+	<string name="dlg_preference_label">Preferencje</string>
+	<string name="dlg_preference_store">Preferencje zapisane</string>
+	<string name="dlg_preference_background">Aktualizacje w tle i powiadomienia</string>
+	<string name="dlg_preference_interval">Częstotliwość aktualizacji (godzinowa):</string>
+	<string name="dlg_preference_note_boot">Powiadomienia przy starcie systemu</string>
+	<string name="dlg_preference_note_monitor">Powiadomienia ciągłego monitorowania</string>
+	<string name="dlg_preference_note_change">Powiadomienie przy każdej zmianie</string>
+	<string name="dlg_preference_note_alarm">Alarm wraz z powiadomieniem</string>
+	<string name="dlg_preference_note_ringtone">Wybierz dźwięk powiadomienia:</string>
+</resources>

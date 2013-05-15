@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".SDbooster" >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="50dip"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:src="@drawable/name" >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/app_author"
+                android:textColor="#F2F2F2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/app_design"
+                android:textColor="#F2F2F2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="20dip"
+                android:background="#A4A4A4" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/card_list_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dip"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="@string/msg_error_no_card_list"
+                    android:textColor="#E60000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" >
+                </TextView>
+                
+                <ImageView
+                    android:id="@+id/btn_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/button_selector_red" 
+                    android:src="@drawable/report">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="vertical"                
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:background="#A4A4A4" >
+            </View>
+
+      		<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+                
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75" >
+
+                    <CheckBox
+                        android:id="@+id/cbx_cache_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"
+                        android:tag="cbx_cache_all"
+                        android:maxLines="2"
+                        android:text="@string/cbox_size_all"
+                        android:textColor="#F2F2F2" >
+                    </CheckBox>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dip"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center_horizontal" >
+
+                    <EditText
+                        android:id="@+id/cache_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:hint="@string/edit_hint_label"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxEms="4"
+                        android:minEms="4" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbx_boot_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:button="@drawable/checkbox_selector"
+                android:tag="cbx_boot_all"
+                android:maxLines="2"
+                android:text="@string/cbox_boot_all"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/cbx_monitor_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:button="@drawable/checkbox_selector"
+                android:tag="cbx_monitor_all"
+                android:maxLines="2"
+                android:text="@string/cbox_monitor_all"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+        </LinearLayout>
+    </ScrollView>
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="50dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_alignParentBottom="true"
+        android:background="#A4A4A4" >
+    </View>
+    
+    <include layout="@layout/button_bar"/>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/sd_info" >
+    </ImageView>
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.20"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="@string/card_part_label"
+        android:textColor="#F2F2F2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/card_part_size"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.15"
+        android:gravity="center_horizontal"
+        android:ellipsize="none"
+        android:minWidth="35dip"
+        android:singleLine="true"
+        android:textColor="#F2F2F2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" >
+    </TextView>
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.20"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="@string/card_cache_label"
+        android:textColor="#F2F2F2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/card_cache_size"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.15"
+        android:gravity="center_horizontal"
+        android:ellipsize="none"
+        android:minWidth="30dip"
+        android:singleLine="true"
+        android:textColor="#F2F2F2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/button_selector_info" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/card_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:background="@drawable/button_selector_setup" >
+    </ImageView>
+</LinearLayout>

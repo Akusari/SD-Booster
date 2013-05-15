@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Version 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Icons by Jozef Kruszynski</string>
+    <string name="menu_settings">Settings</string>
+    <string name="cbox_boot_all">Set all devices on system start</string>
+    <string name="cbox_boot_card">Set this device on boot</string>
+    <string name="cbox_monitor_all">Monitor all devices</string>
+    <string name="cbox_monitor_card">Monitor this device</string>
+    <string name="cbox_size_all">Cache for all devices:</string>
+    <string name="card_part_label">Size:</string>
+	<string name="card_cache_label">Cache:</string>
+	<string name="card_size_label">virtual</string>
+	<string name="msg_error_no_card">No card(s) to manage</string>
+	<string name="msg_error_no_root">SD-Booster has no root permission</string>
+	<string name="msg_error_no_setup">No cache values found. Please setup your devices</string>
+	<string name="msg_error_no_card_list">No cards found!</string>
+	<string name="msg_all_ok">All cache values successful updated</string>
+	<string name="msg_box_override_enable">This option override card settings</string>
+	<string name="msg_box_override_disable">Feature disabled</string>
+	<string name="msg_box_logical">Monitor option enabled, but no background updates active!</string>
+	<string name="msg_kernel_cache_p1">Set cache for device</string>
+	<string name="msg_kernel_cache_p2">to</string>
+	<string name="msg_kernel_cache_p3">was successful</string>
+	<string name="msg_kernel_cache_p4">failed</string>
+	<string name="msg_kernel_device_skip_p1">Device</string>
+	<string name="msg_kernel_device_skip_p2">will be skipped</string>
+	<string name="msg_service_start">Service started</string>
+	<string name="msg_service_stop">Service stopped</string>
+	<string name="msg_service_ticker_new">New device detected. Please setup your card(s)</string>
+	<string name="msg_service_ticker_monitor_p1">Device</string>
+	<string name="msg_service_ticker_monitor_p2">successful set to</string>
+	<string name="msg_service_ticker_value_p1">Device</string>
+	<string name="msg_service_ticker_value_p2">is unmanaged</string>
+	<string name="msg_new_card">is a new device and currently unmanaged</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">License</string>
+	<string name="dlg_license_text">SD-Booster is not responsible for any kind of damage on your phone.\nSD-Booster needs root permission to run!\nPlease accept this by using the OK button or leave the application with cancel.</string>
+	<string name="dlg_info_label">Info</string>
+	<string name="dlg_test_no_mount">No SD-Card mounted</string>
+	<string name="dlg_card_info_name_label">Name:</string>
+	<string name="dlg_card_info_part_label">Size:</string>
+	<string name="dlg_card_info_cache_label">Cache:</string>
+	<string name="dlg_card_info_date_label">Date:</string>
+	<string name="dlg_card_info_serial_label">Serial:</string>
+	<string name="dlg_card_info_unknown_label">unknown</string>
+	<string name="dlg_setup_label">Setup</string>
+	<string name="dlg_setup_name_label">Name:</string>
+	<string name="dlg_setup_cache_label">Cache size (current/user):</string>
+	<string name="dlg_setup_cache_edit_label">Cache size:</string>
+	<string name="dlg_setup_cache_size_error">Please use a cache value between 128 up to 8192</string>
+	<string name="dlg_setup_text">Select a cache size between 128 and 8192. A good value could be 512, 1024 or 2048.</string>
+	<string name="dlg_progress_label">Speedtest</string>
+	<string name="dlg_progress_text">Test is running. This may take a while&#8230;</string>
+	<string name="dlg_preference_label">Preferences</string>
+	<string name="dlg_preference_store">Preferences saved</string>
+	<string name="dlg_preference_background">Background updates and notifications</string>
+	<string name="dlg_preference_interval">Update interval (hours):</string>
+	<string name="dlg_preference_note_boot">Notification on boot</string>
+	<string name="dlg_preference_note_monitor">Notification on monitor</string>
+	<string name="dlg_preference_note_change">Notification on state change</string>
+	<string name="dlg_preference_note_alarm">Alert if notification comes up</string>
+	<string name="dlg_preference_note_ringtone">Choose a ringtone:</string>
+</resources>

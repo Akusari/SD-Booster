@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="10dip">
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <CheckBox
+                android:id="@+id/checkbox_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_background"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_interval"
+                android:textColor="#F2F2F2" >
+            </TextView>
+            
+            <Spinner
+                android:id="@+id/spinner_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/dlg_preference_interval_values"
+                android:prompt="@string/dlg_preference_interval"
+                style="@style/SpinnerTheme" >
+            </Spinner>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#A4A4A4" >
+            </View>
+          
+            <CheckBox
+                android:id="@+id/checkbox_note_boot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_note_boot"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <CheckBox
+                android:id="@+id/checkbox_note_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_note_monitor"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <CheckBox
+                android:id="@+id/checkbox_note_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_note_change"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#A4A4A4" >
+            </View>
+             
+            <CheckBox
+                android:id="@+id/checkbox_note_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_note_alarm"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:maxLines="2"
+                android:text="@string/dlg_preference_note_ringtone"
+                android:textColor="#F2F2F2" >
+            </TextView>
+            
+            <ImageView
+                android:id="@+id/btn_ringtone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector_blue"
+                android:src="@drawable/ringtone" >
+            </ImageView>
+		</LinearLayout>
+    </ScrollView>
+    
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:background="#A4A4A4" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:baselineAligned="false"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="10dip"  >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/dlg_pref_btn_cancel"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_selector_red"
+                android:src="@drawable/cancel" >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/dlg_pref_btn_ok"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_selector_green"
+                android:src="@drawable/accept" >
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

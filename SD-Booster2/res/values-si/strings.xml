@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Verzija 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Ikone od Jozef Kruszynski</string>
+    <string name="menu_settings">Nastavitve</string>
+    <string name="cbox_boot_all">Nastavi vse naprave ob zagonu sistema</string>
+    <string name="cbox_boot_card">Nastavi to napravo ob zagonu</string>
+    <string name="cbox_monitor_all">Prikaži vse naprave</string>
+    <string name="cbox_monitor_card">Prikaži to napravo</string>
+    <string name="cbox_size_all">Pomnilnik za vse naprave:</string>
+    <string name="card_part_label">Velikost:</string>
+	<string name="card_cache_label">Pomnilnik:</string>
+	<string name="msg_error_no_card">Ni kartic(e) za upravljat</string>
+	<string name="msg_error_no_root">SD-Booster nima dovoljenja roota</string>
+	<string name="msg_error_no_setup">Vrednosti pomnilnika niso najdene. Nastavi svojo napravo</string>
+	<string name="msg_error_no_card_list">SD kartica ni najdena</string>
+	<string name="msg_all_ok">Vse vrednosti pomnilnika uspešno nastavljene</string>
+	<string name="msg_box_override_enable">Ta nastavitev povozi nastavitve sd kartice</string>
+	<string name="msg_box_override_disable">Funkcija je onemogočena</string>
+	<string name="msg_kernel_cache_p1">Nastavi pomnilnik za napravo</string>
+	<string name="msg_kernel_cache_p2">za</string>
+	<string name="msg_kernel_cache_p3">je bilo uspešno</string>
+	<string name="msg_kernel_cache_p4">neuspešno</string>
+	<string name="msg_kernel_device_skip_p1">Naprava</string>
+	<string name="msg_kernel_device_skip_p2">bo preskočeno</string>
+	<string name="msg_service_start">Storitev zagnana</string>
+	<string name="msg_service_stop">Storitev ustavljena</string>
+	<string name="msg_service_ticker_new">Nova naprava najdena. Nastavi svojo sd kartico</string>
+	<string name="msg_service_ticker_monitor_p1">Naprava</string>
+	<string name="msg_service_ticker_monitor_p2">Uspešno nastavljeno na</string>
+	<string name="msg_service_ticker_value_p1">Naprava</string>
+	<string name="msg_service_ticker_value_p2">je nenadzorovana</string>
+	<string name="msg_new_card">je nova naprava in trenutno ni nadzorovana</string>
+	<string name="msg_chooser">Poročaj z</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Licenca</string>
+	<string name="dlg_license_text">SD-Booster ni odgovoren za kakršno koli škodo na vašem telefonu.\nSD-Booster rabi dovoljenje root-a za delovanje!\nPotrdi to z OK ali opusti z Cancel.</string>
+	<string name="dlg_info_label">Info</string>
+	<string name="dlg_test_no_mount">Kartica ni naložena</string>
+	<string name="dlg_card_info_name_label">Ime:</string>
+	<string name="dlg_card_info_part_label">Velikost:</string>
+	<string name="dlg_card_info_cache_label">Pomnilnik:</string>
+	<string name="dlg_card_info_date_label">Datum:</string>
+	<string name="dlg_card_info_serial_label">Serijska št:</string>
+	<string name="dlg_setup_label">Nastavitve</string>
+	<string name="dlg_setup_name_label">Ime:</string>
+	<string name="dlg_setup_cache_label">Velikost pomnilnika (trenutni/uporabnik):</string>
+	<string name="dlg_setup_cache_user">neuporabljen</string>
+	<string name="dlg_setup_cache_edit_label">Velikost pomnilnika (KB):</string>
+	<string name="dlg_setup_cache_size_error">Uporabi vrednosti pomnilnika od 128 do 8192</string>
+	<string name="dlg_setup_text">Nastavi vrednost pomnilnika od 128 do 8192. Dobra nastavitev bi bila 512, 1024 ali 2048.</string>
+	<string name="dlg_progress_label">Test hitrosti</string>
+	<string name="dlg_progress_text">Test v teku. To lahko traja nekaj časa&#8230;</string>
+	<string name="dlg_preference_label">Nastavitve</string>
+	<string name="dlg_preference_store">Nastavitve shranjene</string>
+	<string name="dlg_preference_background">Obvestila in poosodobitve v odzadju</string>
+	<string name="dlg_preference_interval">Poosodobitveni interval (ure):</string>
+	<string name="dlg_preference_note_boot">Obvestilo ob zagonu</string>
+	<string name="dlg_preference_note_monitor">Obvestilo na zaslonu</string>
+	<string name="dlg_preference_note_change">Obvestilo o spremembi stanja</string>
+	<string name="dlg_preference_note_alarm">Opozori, če se pokaže obvestilo</string>
+	<string name="dlg_preference_note_ringtone">Izberi zvonenje:</string>
+</resources>

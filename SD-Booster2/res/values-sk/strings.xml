@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Verzia 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Ikony od Jozef Kruszynski</string>
+    <string name="menu_settings">Nastavenia</string>
+    <string name="cbox_boot_all">Nastaviť všetky zariadenia pri štarte systému</string>
+    <string name="cbox_boot_card">Nastaviť toto zariadenie pri bootovaní</string>
+    <string name="cbox_monitor_all">Sledovať všetky zariadenia</string>
+    <string name="cbox_monitor_card">Sledovať toto zariadenie</string>
+    <string name="cbox_size_all">Cache pre všetky zariadenia:</string>
+    <string name="card_part_label">Veľkosť:</string>
+	<string name="card_cache_label">Cache:</string>
+	<string name="msg_error_no_card">Žiadna karta(y) pre správu</string>
+	<string name="msg_error_no_root">SD-Booster nemá ROOT povolenie</string>
+	<string name="msg_error_no_setup">Nenájdené žiadne cache hodnoty. Prosím nastavte si zariadenie</string>
+	<string name="msg_error_no_card_list">Nenájdené žiadne karty!</string>
+	<string name="msg_all_ok">Všetky cache hodnoty boli úspešne aktualizované</string>
+	<string name="msg_box_override_enable">Táto voľba prepíše nastavenia karty</string>
+	<string name="msg_box_override_disable">Funkcia vypnutá</string>
+	<string name="msg_kernel_cache_p1">Nastavenie cache pre zariadenie</string>
+	<string name="msg_kernel_cache_p2">pre</string>
+	<string name="msg_kernel_cache_p3">bolo úspešné</string>
+	<string name="msg_kernel_cache_p4">nebolo úspešné</string>
+	<string name="msg_kernel_device_skip_p1">Zariadenie</string>
+	<string name="msg_kernel_device_skip_p2">bude preskočené</string>
+	<string name="msg_service_start">Služba začala</string>
+	<string name="msg_service_stop">Služba skončila</string>
+	<string name="msg_service_ticker_new">Nájdené nové zariadenie. Prosím nastavte kartu(y)</string>
+	<string name="msg_service_ticker_monitor_p1">Zariadenie</string>
+	<string name="msg_service_ticker_monitor_p2">úspešne nastavené na</string>
+	<string name="msg_service_ticker_value_p1">Zariadenie</string>
+	<string name="msg_service_ticker_value_p2">nie je spravované</string>
+	<string name="msg_new_card">je nové zariadenie a je práve nespravované</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Licencia</string>
+	<string name="dlg_license_text">SD-Booster nie je zodpovedný za akékoľvek škody na vašom telefóne.\nSD-Booster potrebuje ROOT povolenie pre chod aplikácie!\nPríjmite toto prosím tlačítkom OK alebo ukončite aplikáciu tlačítkom Cancel.</string>
+	<string name="dlg_info_label">Info</string>
+	<string name="dlg_test_no_mount">Nepripojená žiadna SD karta</string>
+	<string name="dlg_card_info_name_label">Meno:</string>
+	<string name="dlg_card_info_part_label">Veľkosť:</string>
+	<string name="dlg_card_info_cache_label">Cache:</string>
+	<string name="dlg_card_info_date_label">Dátum:</string>
+	<string name="dlg_card_info_serial_label">Sériové číslo:</string>
+	<string name="dlg_setup_label">Setup</string>
+	<string name="dlg_setup_name_label">Meno:</string>
+	<string name="dlg_setup_cache_label">Veľkosť cache (aktuálné/užívateľ):</string>
+	<string name="dlg_setup_cache_edit_label">Veľkosť cache:</string>
+	<string name="dlg_setup_cache_size_error">Prosím použite cache hodnotu medzi 128 až 8192</string>
+	<string name="dlg_setup_text">Vyberte cache hodnotu medzi 128 až 8192. Dobré hodnoty sú 512, 1024 alebo 2048.</string>
+	<string name="dlg_progress_label">Test rýchlosti</string>
+	<string name="dlg_progress_text">Test prebieha. Môže to trvať niekoľko sekúnd&#8230;</string>
+	<string name="dlg_preference_label">Nastavenia</string>
+    <string name="dlg_preference_store">Nastavenia uložené</string>
+    <string name="dlg_preference_background">Notifikácie na pozadí</string>
+    <string name="dlg_preference_interval">Interval aktualizovania (hodiny):</string>
+    <string name="dlg_preference_note_boot">Notifikácia pri spustení</string>
+    <string name="dlg_preference_note_monitor">Notifikácia pri sledovaní</string>
+    <string name="dlg_preference_note_change">Notifikácia pri zmene stavu</string>
+    <string name="dlg_preference_note_alarm">Upozorniť pri notifikácií</string>
+    <string name="dlg_preference_note_ringtone">Vybrať zvuk upozornenia:</string>
+</resources>

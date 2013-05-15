@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Verzió 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Az ikonokat Jozef Kruszynski készítette</string>
+    <string name="menu_settings">Beállítások</string>
+    <string name="cbox_boot_all">Bootoláskor alkalmazza minden elemre</string>
+    <string name="cbox_boot_card">Bootoláskor alkalmazza</string>
+    <string name="cbox_monitor_all">Minden elem megfigyelése</string>
+    <string name="cbox_monitor_card">Elem megfigyelése</string>
+    <string name="cbox_size_all">Gyorsítótár mérete minden elemnek:</string>
+    <string name="card_part_label">Méret:</string>
+	<string name="card_cache_label">Gyorsítótár:</string>
+	<string name="card_size_label">tényleges</string>
+	<string name="msg_error_no_card">Nem található SD kártya</string>
+	<string name="msg_error_no_root">Az SD-Booster-nek nincs root jogosultsága</string>
+	<string name="msg_error_no_setup">Nem találhatóak gyorsítótár értékek.</string>
+	<string name="msg_error_no_card_list">Nem találhatóak SD kártyák!</string>
+	<string name="msg_all_ok">Gyorsítótár értékek sikeresen frissítve</string>
+	<string name="msg_box_override_enable">Ez az opció felülírja a kártya beállításait</string>
+	<string name="msg_box_override_disable">Szolgáltatás kikapcsolva</string>
+	<string name="msg_kernel_cache_p1">A gyorsítótár beállítása</string>
+	<string name="msg_kernel_cache_p2">a következõ elemre:</string>
+	<string name="msg_kernel_cache_p3">sikerült</string>
+	<string name="msg_kernel_cache_p4">nem sikerült</string>
+	<string name="msg_kernel_device_skip_p1">Ez az elem</string>
+	<string name="msg_kernel_device_skip_p2">ki lesz hagyva</string>
+	<string name="msg_service_start">A szolgáltatás elindult</string>
+	<string name="msg_service_stop">A szolgáltatás leállt</string>
+	<string name="msg_service_ticker_new">Új elem érzékelve. Kérlek, állítsd be.</string>
+	<string name="msg_service_ticker_monitor_p1">Az elem</string>
+	<string name="msg_service_ticker_monitor_p2">sikeresen be lett állítva</string>
+	<string name="msg_service_ticker_value_p1">Az elem</string>
+	<string name="msg_service_ticker_value_p2">nincs kezelve</string>
+	<string name="msg_new_card">egy új elem, és jelenleg nincs kezelve</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Licensz</string>
+	<string name="dlg_license_text">Az SD-Booster nem vállal felelõsséget semmiféle kárért.\nAz alkalmazásnak root jogosultságra van szüksége!\nHa elfogadod a fentieket, menj az OK gombra, ellenkezõ esetben hagyd el az alkalmazást a Mégse gombbal</string>
+	<string name="dlg_info_label">Infó</string>
+	<string name="dlg_test_no_mount">Nincs SD kártya csatlakoztatva</string>
+	<string name="dlg_card_info_name_label">Név:</string>
+	<string name="dlg_card_info_part_label">Méret:</string>
+	<string name="dlg_card_info_cache_label">Gyorsítótár:</string>
+	<string name="dlg_card_info_date_label">Dátum:</string>
+	<string name="dlg_card_info_serial_label">Kód:</string>
+	<string name="dlg_card_info_unknown_label">ismeretlen</string>
+	<string name="dlg_setup_label">Beállítás</string>
+	<string name="dlg_setup_name_label">Név:</string>
+	<string name="dlg_setup_cache_label">Gyorsítótár mérete(jelenlegi/kívánt):</string>
+	<string name="dlg_setup_cache_edit_label">Gyorsítótár méret:</string>
+	<string name="dlg_setup_cache_size_error">Kérlek állíts be egy gyorsítótár értéket 128 és 8192 között.</string>
+	<string name="dlg_setup_text">Állítsd be egy gyorsítótár méretet 128 és 8192 között 512, 1024 vagy 2048 ajánlott.</string>
+	<string name="dlg_progress_label">Sebességteszt</string>
+	<string name="dlg_progress_text">Fut a teszt. Ez eltarthat egy ideig&#8230;</string>
+	<string name="dlg_preference_label">Beállítások</string>
+    <string name="dlg_preference_store">Beállítások mentve</string>
+    <string name="dlg_preference_background">Háttérfrissítések és értesítések</string>
+    <string name="dlg_preference_interval">Frissítési gyakoriság (óra):</string>
+    <string name="dlg_preference_note_boot">Értesítés bootolásnál</string>
+    <string name="dlg_preference_note_monitor">Értesítés monitorozásnál</string>
+    <string name="dlg_preference_note_change">Értesítés állapotváltozásnál</string>
+    <string name="dlg_preference_note_alarm">Riasztás értesítésnél</string>
+    <string name="dlg_preference_note_ringtone">Hang kiválasztása:</string>
+</resources>

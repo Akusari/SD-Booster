@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="10dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70" >
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/dlg_setup_name_label"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>        
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30" >
+
+                    <TextView
+                        android:id="@+id/dlg_setup_name_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#A4A4A4" >
+            </View>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false" >
+                
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.70" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:text="@string/dlg_setup_cache_label"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dlg_setup_cache_layout"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/dlg_setup_cache_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+						android:maxLines="1"
+						android:singleLine="true"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/dlg_setup_cache_user_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+						android:maxLines="1"
+						android:singleLine="true"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false" >
+                
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.70" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       	android:maxLines="2"
+                        android:singleLine="false"
+                        android:text="@string/dlg_setup_cache_edit_label"
+                        android:textColor="#F2F2F2"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" >
+                    </TextView>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30" >
+
+                    <EditText
+                        android:id="@+id/dlg_setup_cache_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:hint="@string/edit_hint_label"
+                        android:inputType="number"
+                        android:maxEms="4"
+                        android:minEms="4" >
+
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#A4A4A4" >
+            </View>
+
+            <CheckBox
+                android:id="@+id/checkbox_boot_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/cbox_boot_card"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/checkbox_monitor_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector"
+                android:maxLines="2"
+                android:text="@string/cbox_monitor_card"
+                android:textColor="#F2F2F2" >
+            </CheckBox>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:background="#A4A4A4" >
+            </View>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:text="@string/dlg_setup_text"
+                android:textColor="#D2F2F2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans" >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+    
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:background="#A4A4A4" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:baselineAligned="false" 
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="10dip"  >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/dlg_setup_btn_cancel"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_selector_red"
+                android:src="@drawable/cancel" >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/dlg_setup_btn_ok"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_selector_green"
+                android:src="@drawable/accept" >
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
