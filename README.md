@@ -1,11 +1,15 @@
 This is an Eclipse Android project.
+
 You need the Android SDK to work with this project.
+
 You need the Eclipse ADT-Plugin version 22 or higher in order
 to import this project correctly!
 
 Just do a import: File->Import->Android "Exting Android Code into Workspace"
 
 I'm searching developers who wants to work with me on this project!
+
+----------------------------------------------------------------------------------
 
 SD-Booster speeds up your external and internal SD-Card(s) and SD-Memory up
 to 40 times! Enjoy a new feeling of speed on your Android smartphone anytime
@@ -18,12 +22,19 @@ SD-Booster is the only app which supports each card separately!
 Features:
 
 -MMC detection framework to support any SD-Card and SD-Memory
+
 -Speedup every external and internal SD-Memory
+
 -Configure each SD-Card/SD-Memory separately (New!)
+
 -Set on system start (boot) feature
+
 -Device monitoring (New!)
+
 -Notification system (New!)
+
 -Color based suggestion terms of current cache size
+
 -Multi-Language support (New!)
 
 PLEASE don't move SD-Booster to your SD-Card, otherwise SD-Booster doesn't work on boot!
