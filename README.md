@@ -7,11 +7,10 @@ Just do a import: File->Import->Android "Exting Android Code into Workspace"
 
 I'm searching developers who wants to work with me on this project!
 
------------------------------------------------------------------------------------------
-SD-Booster speeds up your external and internal SD-Card(s) and SD-Memory up to 40 times!
-Enjoy a new feeling of speed on your Android smartphone anytime and everywhere you are. 
-Starting apps, listing to your favorite music or just swapping data with your PC ? 
-Whatever you do, the SD-Booster improve your phone speed!
+SD-Booster speeds up your external and internal SD-Card(s) and SD-Memory up
+to 40 times! Enjoy a new feeling of speed on your Android smartphone anytime
+and everywhere you are.  Starting apps, listing to your favorite music or just
+swapping data with your PC ? Whatever you do, SD-Booster improve your phone speed!
 
 SD-Booster needs root permission to run, otherwise SD-Booster can't do anything!
 SD-Booster is the only app which supports each card separately!
