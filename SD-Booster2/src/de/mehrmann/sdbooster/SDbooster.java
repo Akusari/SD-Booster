@@ -128,8 +128,8 @@ public class SDbooster extends Activity {
 
 		context = this;
 		mmcDetection = false;
-
-		Database dbAdapter = getDbInstance();
+		
+		Database db = getDbInstance();
 
 		uiButtonApply = (ImageView) findViewById(R.id.btn_green);
 		uiButtonExit = (ImageView) findViewById(R.id.btn_red);
@@ -166,8 +166,8 @@ public class SDbooster extends Activity {
 
 				if (tag.equals("cbx_monitor_all")) {
 					if (isChecked) {
-						Database dbAdapter = getDbInstance();
-						if (dbAdapter.getPref(1, 1) == 0) {
+						Database db = getDbInstance();
+						if (db.getPref(1, 1) == 0) {
 							showMessage(10, null);
 						}
 					}
@@ -177,8 +177,8 @@ public class SDbooster extends Activity {
 
 				if (tag.equals("cbx_cache_all")) {
 					if (isChecked) {
-						Database dbAdapter = getDbInstance();
-						int allSize = dbAdapter.getPref(5, 0);
+						Database db = getDbInstance();
+						int allSize = db.getPref(5, 0);
 						if (allSize >= 128 && allSize <= 8192 && allSize != 128) {
 							uiCacheSize.setText(String.valueOf(allSize));
 						}
@@ -289,8 +289,8 @@ public class SDbooster extends Activity {
 
 						if (uiBoxCache.isChecked()) {
 
-							Database dbAdapter = getDbInstance();
-							int allSize = dbAdapter.getPref(5, 0); // User size
+							Database db = getDbInstance();
+							int allSize = db.getPref(5, 0); // User size
 
 							if (allSize >= 128 && allSize <= 8192
 									&& allSize != 128) {
@@ -353,8 +353,8 @@ public class SDbooster extends Activity {
 					if (msg.arg2 == 0) {
 
 						if (ringtone != null) {
-							Database dbAdapter = getDbInstance();
-							dbAdapter.setRingTone(ringtone);
+							Database db = getDbInstance();
+							db.setRingTone(ringtone);
 						}
 						showMessage(9, null);
 
@@ -374,8 +374,8 @@ public class SDbooster extends Activity {
 						}
 
 						if (monitor) {
-							Database dbAdapter = getDbInstance();
-							if (dbAdapter.getPref(1, 1) == 0) {
+							Database db = getDbInstance();
+							if (db.getPref(1, 1) == 0) {
 								showMessage(10, null);
 							}
 						}
@@ -397,8 +397,8 @@ public class SDbooster extends Activity {
 					MmcModell card = (MmcModell) msg.obj;
 
 					if (card.isOnMonitor()) {
-						Database dbAdapter = getDbInstance();
-						if (dbAdapter.getPref(1, 1) == 0) {
+						Database db = getDbInstance();
+						if (db.getPref(1, 1) == 0) {
 							showMessage(10, null);
 						}
 					}
@@ -504,11 +504,11 @@ public class SDbooster extends Activity {
 			}
 		});
 
-		uiBoxCache.setChecked(dbAdapter.getPref(4, 0) == 1 ? true : false);
+		uiBoxCache.setChecked(db.getPref(4, 0) == 1 ? true : false);
 		uiBoxCache.setOnCheckedChangeListener(uiBoxListener);
-		uiBoxBoot.setChecked(dbAdapter.getPref(1, 0) == 1 ? true : false);
+		uiBoxBoot.setChecked(db.getPref(1, 0) == 1 ? true : false);
 		uiBoxBoot.setOnCheckedChangeListener(uiBoxListener);
-		uiBoxMonitor.setChecked(dbAdapter.getPref(2, 0) == 1 ? true : false);
+		uiBoxMonitor.setChecked(db.getPref(2, 0) == 1 ? true : false);
 		uiBoxMonitor.setOnCheckedChangeListener(uiBoxListener);
 
 		uiCacheSize
@@ -538,7 +538,7 @@ public class SDbooster extends Activity {
 
 		// License
 
-		if (dbAdapter.getPref(3, 0) == 0) {
+		if (db.getPref(3, 0) == 0) {
 			SDdialog dialog = new SDdialog(context, uiHandler, 2);
 			dialog.useIcon();
 			dialog.show();
@@ -649,8 +649,8 @@ public class SDbooster extends Activity {
 			throw new RuntimeException();
 		}
 
-		Database dbAdapter = getDbInstance();
-		dbAdapter.setPref(index, value, 0);
+		Database db = getDbInstance();
+		db.setPref(index, value, 0);
 	}
 
 	private void showMessage(int index, String text) {
