@@ -17,6 +17,9 @@
 
 package de.mehrmann.sdbooster;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Service;
@@ -128,6 +131,8 @@ public class SDdialog extends Dialog {
 
 			String license = resources.getString(R.string.dlg_license_label);
 			this.setTitle(license);
+			
+			final TextView textView = (TextView) content.findViewById(R.id.dlg_license_text);
 
 			uiButtonCancel = (ImageView) content
 					.findViewById(R.id.dlg_license_btn_cancel);
@@ -153,6 +158,25 @@ public class SDdialog extends Dialog {
 					dismiss();
 				}
 			});
+					
+			String licenseContent;
+			try {
+				
+				InputStream text = context.getAssets().open("license.txt");
+				StringBuilder content = new StringBuilder(); 
+				byte buffer[] = new byte[1024];
+				int count;
+				
+				while ((count = text.read(buffer, 0, 1024)) != -1) {
+					content.append(new String(buffer, 0, count, "utf-8"));
+				}
+				
+				licenseContent = content.toString();
+			} catch (IOException e) {
+				licenseContent = resources.getString(R.string.dlg_license_text);
+			}
+			textView.setText(licenseContent);
+			
 		} else {
 
 			// Startup help screen

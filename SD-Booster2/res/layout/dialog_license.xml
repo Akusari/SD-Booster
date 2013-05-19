@@ -28,10 +28,10 @@
         android:padding="10dip" >
 
         <TextView
+            android:id="@+id/dlg_license_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="false"
-            android:text="@string/dlg_license_text"
             android:textColor="#F2F2F2"
             android:textSize="14sp"
             android:textStyle="bold"
