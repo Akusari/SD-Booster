@@ -1,0 +1,58 @@
+#
+# SD-Booster version 2.x propertie file
+# Copyright Daniel Mehrmann
+# 
+# Supported by Goggle Play Store version
+#
+# EXAMPLE file
+#
+# This file is for Rom experts only
+# This file will be deleted on first run
+# Database get filled with these values
+#
+# Put this file into <app directory>/files
+# Standard: /data/data/de.mehrmann.sd-booster/files/sd-booster.prop
+#
+# You can use global settings and/or card settings
+#
+# If you have no glue about device names just use global settings
+# or create an empty file. Devices will be auto detected
+#
+#
+# Global properties for all cards
+# Global setting override card setting!
+#
+# 0 = Feature is disabled
+# 1 = Feature is enabled
+
+setAllonCache=1
+setAllonBoot=1
+setAllonMonitor=1
+
+# Global cache size for all cards (KB)
+# min = 128 
+# max = 8192
+setAllCacheSize=1536
+
+# Device based properties
+# For each device separately
+
+# Number of devices
+number=2
+
+# Syntax: device_NUMBER_OPTION=value
+# 0 = Feature is disabled
+# 1 = Feature is enabled
+# size = cache size (KB)
+
+# First device
+device_0_name=mmcblk0
+device_0_boot=1
+device_0_monitor=0
+device_0_size=768
+
+# second device
+device_1_name=179:0
+device_1_boot=1
+device_1_monitor=1
+device_1_size=2048
