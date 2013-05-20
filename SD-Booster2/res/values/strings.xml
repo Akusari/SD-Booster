@@ -29,6 +29,11 @@
     <string name="card_part_label">Size:</string>
 	<string name="card_cache_label">Cache:</string>
 	<string name="card_size_label">virtual</string>
+	
+	<!-- TODO need translation -->
+	<string name="msg_error_ui_busy">SD-Booster seems busy. Please try it later again</string>
+	<!-- TODO need translation -->
+	
 	<string name="msg_error_no_card">No card(s) to manage</string>
 	<string name="msg_error_no_root">SD-Booster has no root permission</string>
 	<string name="msg_error_no_setup">No cache values found. Please setup your devices</string>

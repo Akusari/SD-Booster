@@ -66,7 +66,10 @@ public class SDbooster extends Activity {
 	private static Context context;
 
 	private boolean mmcDetection;
-
+	
+	private volatile boolean mmcLock;
+	private volatile boolean kernelLock;
+	
 	private ListAdapter adapter;
 	private Mmc cards;
 
@@ -128,6 +131,7 @@ public class SDbooster extends Activity {
 
 		context = this;
 		mmcDetection = false;
+		mmcLock = false;
 		
 		Database db = getDbInstance();
 
@@ -218,11 +222,17 @@ public class SDbooster extends Activity {
 
 						// all ok
 
-						Thread thread = new Thread(cards);
-						thread.start();
+						if (!mmcLock) {
+							mmcLock = true;
+							Thread thread = new Thread(cards);
+							thread.start();
 
-						if (msg.what == 0) {
-							showMessage(2, null);
+							if (msg.what == 0) {
+								showMessage(2, null);
+							}
+						} else {
+							showMessage(11, null);
+							Log.e(Utils.TAG, "MMC lock found");
 						}
 
 					} else if (msg.arg2 == 3) {
@@ -262,6 +272,12 @@ public class SDbooster extends Activity {
 
 						Log.i(Utils.TAG, text + "." + " (reason = " + msg.what
 								+ ")");
+					}
+					
+					if (kernelLock) {
+						kernelLock = false;
+					} else {
+						Log.e(Utils.TAG, "Kernel without lock");
 					}
 
 				} else if (msg.arg1 == 1) {
@@ -325,6 +341,13 @@ public class SDbooster extends Activity {
 							uiCardList.setVisibility(View.GONE);
 						}
 					}
+					
+					if (mmcLock) {
+						mmcLock = false;
+					} else {
+						Log.e(Utils.TAG, "MMC detecion without lock");
+					}
+					
 				} else if (msg.arg1 == 2) {
 
 					// App exit
@@ -336,8 +359,12 @@ public class SDbooster extends Activity {
 
 						// License accepted
 
-						Thread thread = new Thread(cards);
-						thread.start();
+						if (!mmcLock) {
+							mmcLock = true;
+							
+							Thread thread = new Thread(cards);
+							thread.start();
+						}		
 					} else {
 
 						// help screen
@@ -415,6 +442,11 @@ public class SDbooster extends Activity {
 					showMessage(1, null);
 					return;
 				}
+				
+				if (mmcLock) {
+					showMessage(11, null);
+					return;
+				}
 
 				if (uiBoxCache.isChecked()) {
 					String size = uiCacheSize.getText().toString();
@@ -429,7 +461,14 @@ public class SDbooster extends Activity {
 					int value = Integer.valueOf(size);
 
 					setPref("size", value);
-					cards.setToKernel(value);
+					
+					if (!kernelLock) {
+						kernelLock = true;
+						cards.setToKernel(value);
+					} else {
+						Log.e(Utils.TAG, "Kernel lock found");
+						showMessage(11, null);
+					}
 
 				} else {
 
@@ -443,7 +482,13 @@ public class SDbooster extends Activity {
 					}
 
 					if (setup) {
-						cards.setToKernel(0);
+						if (!kernelLock) {
+							kernelLock = true;
+							cards.setToKernel(0);
+						} else {
+							Log.e(Utils.TAG, "Kernel lock found");
+							showMessage(11, null);
+						}
 					} else {
 						showMessage(6, null);
 					}
@@ -543,6 +588,7 @@ public class SDbooster extends Activity {
 			dialog.useIcon();
 			dialog.show();
 		} else {
+			mmcLock = true;
 			Thread thread = new Thread(cards);
 			thread.start();
 		}
@@ -697,6 +743,10 @@ public class SDbooster extends Activity {
 
 		case 10:
 			msg = getString(R.string.msg_box_logical);
+			break;
+			
+		case 11:
+			msg = getString(R.string.msg_error_ui_busy);
 			break;
 
 		default:
