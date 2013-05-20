@@ -1,0 +1,22 @@
+version 2.0.4:
+-Changed license to GPL
+-Added portuguese Indonesia (Thanks to Khairul) 
+-Code cleanup for Github
+
+version 2.0.3:
+-Fixed serval typos
+-Added special support for AMLOGIC boards (Thanks to Thomas)
+-Added portuguese language (Thanks to maerck)
+-Added info screen at first startup (relaunch since v1.5.4)
+
+version 2.0.2:
+-Fixed UI ListView issue
+-Added logical dependency verification of user settings
+-Added bugreport button (if no SD-Memory found)
+-Added serbian language (Thanks to Gojko)
+
+version 2.0.1:
+-Fixed service issue on low memory
+-Fixed UI license button size
+-Fixed UI misspelling a surname
+-Language files updated
