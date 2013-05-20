@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Verzija 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_design">Ikone napravio Jozef Kruszynski</string>
+    <string name="menu_settings">Postavke</string>
+    <string name="cbox_boot_all">Postavi sve uređaje sa startanjem sistema</string>
+    <string name="cbox_boot_card">Postavi ovaj uređaj nakon bootanja</string>
+    <string name="cbox_monitor_all">Nadgledaj sve uređaje</string>
+    <string name="cbox_monitor_card">Nadgledaj ovaj uređaj</string>
+    <string name="cbox_size_all">Cache za sve uređaje:</string>
+    <string name="card_part_label">Veličina:</string>
+    <string name="card_cache_label">Cache:</string>
+    <string name="msg_error_no_card">Nema kartica(e) za upravljanje</string>
+    <string name="msg_error_no_root">SD-Booster nema root dopuštenje</string>
+    <string name="msg_error_no_setup">Nisu nađene vrijednosti cachea. Please setup your devices</string>
+    <string name="msg_error_no_card_list">Kartica nije pronađena!</string>
+    <string name="msg_all_ok">Sve vrijednosti cachea su uspješno ažurirane</string>
+    <string name="msg_box_override_enable">Ova opcija premošćuje postavke kartice</string>
+    <string name="msg_box_override_disable">Onemogućeno</string>
+    <string name="msg_kernel_cache_p1">Postavi cache za uređaj</string>
+    <string name="msg_kernel_cache_p2">na</string>
+    <string name="msg_kernel_cache_p3">je uspješno</string>
+    <string name="msg_kernel_cache_p4">nije uspjelo</string>
+    <string name="msg_kernel_device_skip_p1">Uređaj</string>
+    <string name="msg_kernel_device_skip_p2">će biti preskoćeno</string>
+    <string name="msg_service_start">Usluga pokrenuta</string>
+    <string name="msg_service_stop">Usluga zaustavljena</string>
+    <string name="msg_service_ticker_new">Novi uređaj detektiran. Podesite karticu(e)</string>
+    <string name="msg_service_ticker_monitor_p1">Uređaj</string>
+    <string name="msg_service_ticker_monitor_p2">Uspješno postavljen na</string>
+    <string name="msg_service_ticker_value_p1">Uređaj</string>
+    <string name="msg_service_ticker_value_p2">nije upravljan</string>
+    <string name="msg_new_card">je novi uređaj i trenutno nije upravljan</string>
+    <string name="edit_hint_label">KB</string>
+    <string name="dlg_license_label">Licenca</string>
+    <string name="dlg_license_text">SD-Booster nije odgovoran za štetu nastalu na vašem mobilnom uređaju.\nSD-Booster treba root dozvolu da bi radio!\nMolimo Vas prihvatite ovo koristeći OK gumb ili napustite aplikaciju odabirom opcije Cancel.</string>
+    <string name="dlg_info_label">Informacije</string>
+    <string name="dlg_test_no_mount">SD-kartica nije mountana</string>
+    <string name="dlg_card_info_name_label">Ime:</string>
+    <string name="dlg_card_info_part_label">Veličina:</string>
+    <string name="dlg_card_info_cache_label">Cache:</string>
+    <string name="dlg_card_info_date_label">Datum:</string>
+    <string name="dlg_card_info_serial_label">Serijski broj:</string>
+    <string name="dlg_card_info_unknown_label">neznan</string>
+    <string name="dlg_setup_label">Postavke</string>
+    <string name="dlg_setup_name_label">Ime:</string>
+    <string name="dlg_setup_cache_label">Veličina cachea (trenutni/korisnik):</string>
+    <string name="dlg_setup_cache_edit_label">Veličina cachea:</string>
+    <string name="dlg_setup_cache_size_error">Molimo Vas koristite veličinu cachea između 128 i 8192</string>
+    <string name="dlg_setup_text">Izaberite veličinu cachea između 128 i 8192. Dobra vrijednost može biti 1024 ili 2048.</string>
+    <string name="dlg_progress_label">Test brzine</string>
+    <string name="dlg_progress_text">Test je pokrenut. Ovo može potrajati…</string>
+    <string name="dlg_preference_label">Podešavanja</string>
+    <string name="dlg_preference_store">Podešavanja spremljena</string>
+    <string name="dlg_preference_background">Pozadinska ažuriranja i obavijesti</string>
+    <string name="dlg_preference_interval">Interval ažuriranja (sati):</string>
+    <string name="dlg_preference_note_boot">Obavijest nakon bootta</string>
+    <string name="dlg_preference_note_monitor">Obavijest o nadgledanju</string>
+    <string name="dlg_preference_note_change">Obavijest o promjeni stanja</string>
+    <string name="dlg_preference_note_alarm">Uzbuna ako se pojavi obavijest</string>
+    <string name="dlg_preference_note_ringtone">Odaberite ton:</string>
+</resources>
