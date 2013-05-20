@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013 Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Versi 2.0.2 © Daniel Mehrmann</string>
+    <string name="app_design">Ikon oleh Jozef Kruszynski</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="cbox_boot_all">Atur semua perangkat pada sistem start</string>
+    <string name="cbox_boot_card">Atur perangkat ini pada boot</string>
+    <string name="cbox_monitor_all">Memantau semua perangkat</string>
+    <string name="cbox_monitor_card">Memantau perangkat ini</string>
+    <string name="cbox_size_all">Cache untuk semua perangkat:</string>
+    <string name="card_part_label">Ukuran:</string>
+	<string name="card_cache_label">Cache:</string>
+	<string name="msg_error_no_card">Tidak ada kartu untuk dikelola</string>
+	<string name="msg_error_no_root">SD-Booster tidak memiliki ijin root</string>
+	<string name="msg_error_no_setup">Tidak ada nilai cache yang ditemukan. Silahkan mengatur perangkat anda</string>
+	<string name="msg_error_no_card_list">Tidak ada kartu yang ditemukan!</string>
+	<string name="msg_all_ok">Semua nilai cache berhasil diperbarui</string>
+	<string name="msg_box_override_enable">Pilihan ini mengesampingkan pengaturan kartu</string>
+	<string name="msg_box_override_disable">Fitur dimatikan</string>
+	<string name="msg_box_logical">Pilihan memantau dihidupkan, tetapi tidak ada pembaruan latar belakang yang aktif!</string>
+	<string name="msg_kernel_cache_p1">Atur cache untuk perangkat</string>
+	<string name="msg_kernel_cache_p2">ke</string>
+	<string name="msg_kernel_cache_p3">berhasil</string>
+	<string name="msg_kernel_cache_p4">gagal</string>
+	<string name="msg_kernel_device_skip_p1">Perangkat</string>
+	<string name="msg_kernel_device_skip_p2">akan dilewati</string>
+	<string name="msg_service_start">Service dimulai</string>
+	<string name="msg_service_stop">Service dihentikan</string>
+	<string name="msg_service_ticker_new">Perangkat baru terdeteksi. Silahkan mengatur kartu anda</string>
+	<string name="msg_service_ticker_monitor_p1">Perangkat</string>
+	<string name="msg_service_ticker_monitor_p2">berhasil atur ke</string>
+	<string name="msg_service_ticker_value_p1">Perangkat</string>
+	<string name="msg_service_ticker_value_p2">tidak terkelola</string>
+	<string name="msg_new_card">adalah perangkat baru dan saat ini tidak terkelola</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Lisensi</string>
+	<string name="dlg_license_text">SD-Booster tidak bertanggung jawab untuk setiap jenis kerusakan pada ponsel anda.\nSD-Booster membutuhkan perijinan root untuk berjalan!\nSilahkan terima ini dengan menggunakan tombol OK atau tinggal aplikasi dengan Cancel.</string>
+	<string name="dlg_info_label">Info</string>
+	<string name="dlg_test_no_mount">Tidak ada SD-Card yang dipasang</string>
+	<string name="dlg_card_info_name_label">Nama:</string>
+	<string name="dlg_card_info_part_label">Ukuran:</string>
+	<string name="dlg_card_info_cache_label">Cache:</string>
+	<string name="dlg_card_info_date_label">Tanggal:</string>
+	<string name="dlg_card_info_serial_label">Serial:</string>
+	<string name="dlg_card_info_unknown_label">diketahui</string>
+	<string name="dlg_setup_label">Setup</string>
+	<string name="dlg_setup_name_label">Nama:</string>
+	<string name="dlg_setup_cache_label">Ukuran cache (saat ini/user):</string>
+	<string name="dlg_setup_cache_edit_label">Ukuran cache:</string>
+	<string name="dlg_setup_cache_size_error">Mohon gunakan nilai cache antara 128 hingga 8192</string>
+	<string name="dlg_setup_text">Pilih ukuran cache antara 128 dan 8192. Isian yang baik bisa menjadi 1024 atau 2048.</string>
+	<string name="dlg_progress_label">Speedtest</string>
+	<string name="dlg_progress_text">Tes sedang berjalan. Ini mungkin memakan waktu cukup lama&#8230;</string>
+	<string name="dlg_preference_label">Preferensi</string>
+	<string name="dlg_preference_store">Preferensi disimpan</string>
+	<string name="dlg_preference_background">Pembaruan latar belakang dan pemberitahuan</string>
+	<string name="dlg_preference_interval">Interval pembaruan (jam):</string>
+	<string name="dlg_preference_note_boot">Pemberitahuan pada boot</string>
+	<string name="dlg_preference_note_monitor">Pemberitahuan pada pantauan</string>
+	<string name="dlg_preference_note_change">Pemberitahuan pada perubahan bagian</string>
+	<string name="dlg_preference_note_alarm">Dering jika pemberitahuan muncul</string>
+	<string name="dlg_preference_note_ringtone">Pilih nada dering:</string>
+</resources>
