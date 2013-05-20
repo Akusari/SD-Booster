@@ -1,6 +1,7 @@
 version 2.0.4:
 -Changed license to GPL
--Added portuguese Indonesia (Thanks to Khairul) 
+-Added croatian language (Thanks to markokljuc/XDA)
+-Added indonesia language (Thanks to Khairul) 
 -Code cleanup for Github
 
 version 2.0.3:
