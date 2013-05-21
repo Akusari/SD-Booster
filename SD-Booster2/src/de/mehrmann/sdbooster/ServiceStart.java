@@ -35,7 +35,7 @@ public class ServiceStart extends Service {
 
 	private static Context context;
 	private static Handler handler;
-	private static Database db;
+	private static Database dbAdapter;
 
 	private boolean onBoot;
 	private boolean onMonitor;
@@ -180,19 +180,19 @@ public class ServiceStart extends Service {
 			}
 		};
 
-		Database dbAdapter = getDbInstance();
+		Database db = getDbInstance();
 
-		allBoot = dbAdapter.getPref(1, 0) == 1 ? true : false;
-		allMonitor = dbAdapter.getPref(2, 0) == 1 ? true : false;
-		allCache = dbAdapter.getPref(4, 0) == 1 ? true : false;
-		license = dbAdapter.getPref(3, 0) == 1 ? true : false;
-		allSize = dbAdapter.getPref(5, 0);
+		allBoot = db.getPref(1, 0) == 1 ? true : false;
+		allMonitor = db.getPref(2, 0) == 1 ? true : false;
+		allCache = db.getPref(4, 0) == 1 ? true : false;
+		license = db.getPref(3, 0) == 1 ? true : false;
+		allSize = db.getPref(5, 0);
 
-		useUpdates = dbAdapter.getPref(1, 1) == 1 ? true : false;
-		useAlarmNote = dbAdapter.getPref(2, 1) == 1 ? true : false;
-		useBootNote = dbAdapter.getPref(3, 1) == 1 ? true : false;
-		useMonitorNote = dbAdapter.getPref(4, 1) == 1 ? true : false;
-		useChangeNote = dbAdapter.getPref(5, 1) == 1 ? true : false;
+		useUpdates = db.getPref(1, 1) == 1 ? true : false;
+		useAlarmNote = db.getPref(2, 1) == 1 ? true : false;
+		useBootNote = db.getPref(3, 1) == 1 ? true : false;
+		useMonitorNote = db.getPref(4, 1) == 1 ? true : false;
+		useChangeNote = db.getPref(5, 1) == 1 ? true : false;
 
 		if (!useUpdates && onMonitor) {
 			throw new RuntimeException();
@@ -257,22 +257,22 @@ public class ServiceStart extends Service {
 
 	private static Database getDbInstance() {
 
-		if (db == null) {
-			db = new Database(context);
+		if (dbAdapter == null) {
+			dbAdapter = new Database(context);
 		}
 
-		return db;
+		return dbAdapter;
 	}
 
 	private void updateDbToModell() {
 
 		MmcModell dbCard;
-		Database dbAdapter = getDbInstance();
+		Database db = getDbInstance();
 
 		for (MmcModell card : this.cards.getList()) {
 
-			if (!dbAdapter.cardExist(card)) {
-				card.setId(dbAdapter.cardInsert(card));
+			if (!db.cardExist(card)) {
+				card.setId(db.cardInsert(card));
 
 				if (!allCache) {
 					if (onBoot) {
@@ -299,9 +299,9 @@ public class ServiceStart extends Service {
 				String serial = card.getSerial();
 
 				if (serial.equals(Utils.VIRTUAL)) {
-					dbCard = dbAdapter.getCard(card.getName(), false);
+					dbCard = db.getCard(card.getName(), false);
 				} else {
-					dbCard = dbAdapter.getCard(card.getSerial(), true);
+					dbCard = db.getCard(card.getSerial(), true);
 				}
 
 				card.setOnBoot(dbCard.isOnBoot());
@@ -457,8 +457,8 @@ public class ServiceStart extends Service {
 		builder.setContentIntent(pending);
 
 		if (useAlarmNote) {
-			Database dbAdapter = getDbInstance();
-			builder.setSound(Uri.parse(dbAdapter.getRingTone()));
+			Database db = getDbInstance();
+			builder.setSound(Uri.parse(db.getRingTone()));
 		}
 
 		Notification note = builder.build();
