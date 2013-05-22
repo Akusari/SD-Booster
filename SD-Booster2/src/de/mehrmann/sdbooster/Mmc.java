@@ -42,9 +42,11 @@ public class Mmc implements Runnable {
 	private static final String READ_AHEAD_STATIC = "/read_ahead_kb";
 	private static final String SIZE = "/size";
 	
-	private static final String VIRTUAL_DEV_MOUNT = "/dev/block/vold/";
 	private static final String VIRTUAL_DEV_PATH = "/sys/devices/virtual/bdi/";
 	private static final String READ_AHEAD_PATH_LIST[] = {
+		
+		// TODO Should be device model + Android version based
+
 		VIRTUAL_DEV_PATH + "179:0", 
 		VIRTUAL_DEV_PATH + "179:1"
 	};
@@ -99,10 +101,14 @@ public class Mmc implements Runnable {
 	public void run() {
 
 		list = new ArrayList<MmcModell>(8);
-		boolean detected = buildDeviceList();
+		boolean detected = false; //buildDeviceList();
 		
 		if (!detected) {
-			detected = buildVirtualDeviceList();
+			detected = buildDynamicDeviceList();
+		}
+		
+		if (!detected) {
+			detected = buildStaticDeviceList();
 		}
 
 		if (detected) {
@@ -197,46 +203,89 @@ public class Mmc implements Runnable {
 
 		return true;
 	}
+	
+	private boolean buildDynamicDeviceList() {
+		
+		ArrayList<String> deviceList = new ArrayList<String>();
+		Kernel.addSDMount(deviceList);
+			
+		for (String cardPath : deviceList) {
+			
+			if (new File(cardPath).exists()) {
+				
+				Log.i(Utils.TAG, "Other device " + cardPath + " exist");
+				String data[] = cardPath.split("/");
+				String name;
+				
+				if (data.length > 0) {
+					name = data[data.length - 1];
+					Log.i(Utils.TAG, "Other device name: " + name);
+				} else {
+					Log.i(Utils.TAG, "Other device " + cardPath + " rejected");
+					continue;
+				}
+				
+				MmcModell sdCard = new MmcModell();
+				
+				sdCard.setType(3);
+				sdCard.setName(name);		
+				sdCard.setCid(Utils.UNKNOWN);
+				sdCard.setCsd(Utils.UNKNOWN);
+				sdCard.setDate(Utils.UNKNOWN);
+				sdCard.setOemId(Utils.UNKNOWN);
+				sdCard.setManufactorId(Utils.UNKNOWN);
+				
+				sdCard.setAheadValue(getDeviceValue(name, READ_AHEAD, false));
+				sdCard.setAheadPath(BLK_PATH + name + READ_AHEAD);
+				sdCard.setSize(getDeviceValue(name, SIZE, false));
+				sdCard.setAheadUser("0");
+				sdCard.setSerial(getDeviceValue(name, SERIAL, false));
+				
+				
+				if (sdCard.deviceIsOk()) {
+					list.add(sdCard);
 
-	private boolean buildVirtualDeviceList() {
-		
-		ArrayList<String> virtualList = new ArrayList<String>();
-		Kernel.addSDMount(virtualList);
-		
-		// dynamic mount list
-			
-		if (virtualList.size() > 0) {
-			
-			for (int i = 0; i < virtualList.size(); i++) {
-				String tab = virtualList.get(i);
-				String path = tab.replace(VIRTUAL_DEV_MOUNT, VIRTUAL_DEV_PATH);
-				virtualList.set(i, path);
-				Log.i(Utils.TAG, "Virtual dirty device " + path + " added");
-			}
-		} 
-			
-		// static mount list
-		
-		// TODO Should be device model + Android version based
-			
-		for (String path : READ_AHEAD_PATH_LIST) {
-			if (!virtualList.contains(path)) {
-				virtualList.add(path); // dirty hack
+					Log.i(Utils.TAG,
+							"Found: " + sdCard.getName() + "/"
+									+ sdCard.getCid() + "/"
+									+ sdCard.getCsd() + "/"
+									+ sdCard.getDate() + "/"
+									+ sdCard.getOemId() + "/"
+									+ sdCard.getManufactorId() + "/"
+									+ sdCard.getSerial() + "/"
+									+ sdCard.getAheadValue() + "/" + "p"
+									+ sdCard.getAheadPath() + "/"
+									+ sdCard.getSize() + "/"
+									+ sdCard.getType());
+				} else {
+					Log.w(Utils.TAG, "Device is not useable: MmcModell:"
+							+ sdCard.toString());
+				}	
+			} else {
+				Log.i(Utils.TAG, "Other device " + cardPath + " rejected");
 			}
 		}
 		
-		// Loop through virtual devices
+		if (list.size() == 0) {
+			Log.w(Utils.TAG, "No other devices found!");
+			return false;
+		}
 		
-		for (String cardPath : virtualList) {
+		return true;
+	}
 
+	private boolean buildStaticDeviceList() {
+		
+		for (String cardPath : READ_AHEAD_PATH_LIST) {
+			
 			if (new File(cardPath).exists()) {
-
+				
 				MmcModell sdCard = new MmcModell();
 				String data[] = cardPath.split("/");
-
+				
 				// data[3] = virtual
-				// data[5] = example 179:0
-
+				// data[5] = 179:0
+				
 				sdCard.setType(0);
 				sdCard.setName(data[5]);
 				sdCard.setCid(data[3]);
@@ -245,34 +294,34 @@ public class Mmc implements Runnable {
 				sdCard.setOemId(data[3]);
 				sdCard.setManufactorId(data[3]);
 				sdCard.setSerial(data[3]);
-				sdCard.setAheadValue(getDeviceValue(cardPath,
-						READ_AHEAD_STATIC, true));
+				sdCard.setAheadValue(getDeviceValue(cardPath, READ_AHEAD_STATIC, true));
 				sdCard.setAheadPath(cardPath + READ_AHEAD_STATIC);
-				sdCard.setSize(data[3]);
+				sdCard.setSize(data[3]);	
 				sdCard.setAheadUser("0");
-
+				
 				list.add(sdCard);
-
-				Log.i(Utils.TAG,
-						"Found: " + sdCard.getName() + "/" 
-								+ sdCard.getCid() + "/"
-								+ sdCard.getCsd() + "/"
-								+ sdCard.getDate() + "/" 
-								+ sdCard.getOemId()+ "/" 
-								+ sdCard.getManufactorId() + "/"
-								+ sdCard.getSerial() + "/"
-								+ sdCard.getAheadValue() + "/" + "p"
-								+ sdCard.getAheadPath() + "/"
-								+ sdCard.getSize() + "/" + sdCard.getType());
+				
+				Log.i(Utils.TAG, "Found: " 
+					+ sdCard.getName() + "/" 
+					+ sdCard.getCid() + "/"
+					+ sdCard.getCsd() + "/" 
+					+ sdCard.getDate() + "/"
+					+ sdCard.getOemId() + "/"
+					+ sdCard.getManufactorId() + "/"
+					+ sdCard.getSerial() + "/"
+					+ sdCard.getAheadValue() + "/" + "p"
+					+ sdCard.getAheadPath() + "/"
+					+ sdCard.getSize() + "/"
+					+ sdCard.getType());
 			}
 		}
-
+				
 		if (list.size() == 0) {
 			Log.w(Utils.TAG, "No virtual devices found!");
 			return false;
 		}
-
-		return true;
+		
+		return true;	
 	}
 	
 	public void setToKernel(int cacheSize) {

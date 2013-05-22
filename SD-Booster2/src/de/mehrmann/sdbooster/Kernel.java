@@ -186,11 +186,14 @@ public class Kernel implements Runnable {
 				
 				if (line.contains("vfat") && !line.contains("secure")) {
 					String path = (line.split(" "))[0];
-					Log.i(Utils.TAG, "Virtual dirty device: " + path);
 					
 					if (path.startsWith("/dev/block/vold/")) {
-						mountPoints.add(path);
-					}	
+						path = path.replace("/dev/block/vold/", "/sys/devices/virtual/bdi/");
+					} else if (path.startsWith("/dev/block")) {
+						path = path.replace("/dev/block", "/sys/block");
+					}
+					Log.i(Utils.TAG, "Other device " + path + " added");
+					mountPoints.add(path);				
 				}
 			}
 			
