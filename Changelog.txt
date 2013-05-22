@@ -1,5 +1,6 @@
 version 2.0.4:
 -Fixed concurrent card list access (issue #1)
+-New virtual device list (based on mount points)
 -Changed license to GPL
 -Added croatian language (Thanks to markokljuc/XDA)
 -Added indonesia language (Thanks to Khairul) 

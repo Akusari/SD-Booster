@@ -220,7 +220,9 @@ public class Mmc implements Runnable {
 		// TODO Should be device model + Android version based
 			
 		for (String path : READ_AHEAD_PATH_LIST) {
-			virtualList.add(path); // dirty hack
+			if (!virtualList.contains(path)) {
+				virtualList.add(path); // dirty hack
+			}
 		}
 		
 		// Loop through virtual devices
