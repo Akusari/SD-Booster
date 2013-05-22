@@ -37,17 +37,6 @@ public abstract class Utils {
 	public static final String SERIAL = "serial";
 	public static final String UNKNOWN = "unknown";
 
-	/* TODO
-	 * Ugly list - Only a fallback! Maybe i could check Build.Modell to each
-	 * entry...
-	 */
-	public static final String READ_AHEAD_PATH_LIST[] = {
-			"/sys/devices/virtual/bdi/179:0", 
-			"/sys/devices/virtual/bdi/179:1",
-			"/sys/devices/virtual/bdi/179:8", 
-			"/sys/devices/virtual/bdi/180:0",
-			"/sys/devices/virtual/bdi/170:0" };
-
 	public static final String TAG = "SD-Booster";
 
 	public static void sendMessage(final Handler handler, int arg1, int arg2,

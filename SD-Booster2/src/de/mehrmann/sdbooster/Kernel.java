@@ -172,6 +172,35 @@ public class Kernel implements Runnable {
 
 		return devices.toString();
 	}
+	
+	public static void addSDMount(final ArrayList<String> mountPoints) {
+			
+		try {
+			
+			Process process = Runtime.getRuntime().exec("mount");
+			BufferedReader bufferedReader = new BufferedReader(
+					new InputStreamReader(process.getInputStream()));
+			
+			String line;		
+			while ((line = bufferedReader.readLine()) != null) {
+				
+				if (line.contains("vfat") && !line.contains("secure")) {
+					String path = (line.split(" "))[0];
+					Log.i(Utils.TAG, "Virtual dirty device: " + path);
+					
+					if (path.startsWith("/dev/block/vold/")) {
+						mountPoints.add(path);
+					}	
+				}
+			}
+			
+			bufferedReader.close();
+			process.destroy();
+			
+		} catch (Exception e) {
+			Log.w(Utils.TAG, "addSDMount(): " + e.toString());
+		}
+	}
 
 	private int setCache(ArrayList<MmcModell> list, String cacheValue) {
 

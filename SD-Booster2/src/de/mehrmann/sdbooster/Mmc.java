@@ -41,6 +41,13 @@ public class Mmc implements Runnable {
 	private static final String READ_AHEAD = "/bdi/read_ahead_kb";
 	private static final String READ_AHEAD_STATIC = "/read_ahead_kb";
 	private static final String SIZE = "/size";
+	
+	private static final String VIRTUAL_DEV_MOUNT = "/dev/block/vold/";
+	private static final String VIRTUAL_DEV_PATH = "/sys/devices/virtual/bdi/";
+	private static final String READ_AHEAD_PATH_LIST[] = {
+		VIRTUAL_DEV_PATH + "179:0", 
+		VIRTUAL_DEV_PATH + "179:1"
+	};
 
 	private final Handler handler;
 	private final int state;
@@ -93,9 +100,9 @@ public class Mmc implements Runnable {
 
 		list = new ArrayList<MmcModell>(8);
 		boolean detected = buildDeviceList();
-
+		
 		if (!detected) {
-			detected = buildStaticDeviceList();
+			detected = buildVirtualDeviceList();
 		}
 
 		if (detected) {
@@ -191,9 +198,34 @@ public class Mmc implements Runnable {
 		return true;
 	}
 
-	private boolean buildStaticDeviceList() {
-
-		for (String cardPath : Utils.READ_AHEAD_PATH_LIST) {
+	private boolean buildVirtualDeviceList() {
+		
+		ArrayList<String> virtualList = new ArrayList<String>();
+		Kernel.addSDMount(virtualList);
+		
+		// dynamic mount list
+			
+		if (virtualList.size() > 0) {
+			
+			for (int i = 0; i < virtualList.size(); i++) {
+				String tab = virtualList.get(i);
+				String path = tab.replace(VIRTUAL_DEV_MOUNT, VIRTUAL_DEV_PATH);
+				virtualList.set(i, path);
+				Log.i(Utils.TAG, "Virtual dirty device " + path + " added");
+			}
+		} 
+			
+		// static mount list
+		
+		// TODO Should be device model + Android version based
+			
+		for (String path : READ_AHEAD_PATH_LIST) {
+			virtualList.add(path); // dirty hack
+		}
+		
+		// Loop through virtual devices
+		
+		for (String cardPath : virtualList) {
 
 			if (new File(cardPath).exists()) {
 
@@ -201,6 +233,7 @@ public class Mmc implements Runnable {
 				String data[] = cardPath.split("/");
 
 				// data[3] = virtual
+				// data[5] = example 179:0
 
 				sdCard.setType(0);
 				sdCard.setName(data[5]);
@@ -239,7 +272,7 @@ public class Mmc implements Runnable {
 
 		return true;
 	}
-
+	
 	public void setToKernel(int cacheSize) {
 
 		kernel.allOnBoot = false;
