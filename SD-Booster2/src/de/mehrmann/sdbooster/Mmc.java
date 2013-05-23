@@ -55,7 +55,9 @@ public class Mmc implements Runnable {
 	private final int state;
 
 	private Kernel kernel;
-	private ArrayList<MmcModell> list;
+	
+	private ArrayList<MmcModell> mmcList;
+	private ArrayList<String> virtualList;
 
 	private class MmcFileNameFilter implements FilenameFilter {
 
@@ -100,8 +102,10 @@ public class Mmc implements Runnable {
 	@Override
 	public void run() {
 
-		list = new ArrayList<MmcModell>(8);
-		boolean detected = false; //buildDeviceList();
+		mmcList = new ArrayList<MmcModell>(8);
+		virtualList = new ArrayList<String>(8);
+		
+		boolean detected = buildDeviceList();
 		
 		if (!detected) {
 			detected = buildDynamicDeviceList();
@@ -170,7 +174,7 @@ public class Mmc implements Runnable {
 
 					if (sdCard.deviceIsOk()) {
 
-						list.add(sdCard);
+						mmcList.add(sdCard);
 
 						Log.i(Utils.TAG,
 								"Found: " + sdCard.getName() + "/"
@@ -196,7 +200,7 @@ public class Mmc implements Runnable {
 			}
 		}
 
-		if (list.size() == 0) {
+		if (mmcList.size() == 0) {
 			Log.w(Utils.TAG, "No block devices found!");
 			return false;
 		}
@@ -213,20 +217,29 @@ public class Mmc implements Runnable {
 			
 			if (new File(cardPath).exists()) {
 				
-				Log.i(Utils.TAG, "Other device " + cardPath + " exist");
 				String data[] = cardPath.split("/");
-				String name;
 				
+				if (data.length >= 6) {
+					if (data[3].contains(Utils.VIRTUAL)) {
+						Log.i(Utils.TAG, "Virtual device " + cardPath + " exist");
+						virtualList.add(cardPath);
+						continue;
+					}
+				}
+				
+				Log.i(Utils.TAG, "Other device " + cardPath + " exist");
+				
+				String name;
 				if (data.length > 0) {
 					name = data[data.length - 1];
-					Log.i(Utils.TAG, "Other device name: " + name);
+					Log.i(Utils.TAG, "Device name: " + name);
 				} else {
-					Log.i(Utils.TAG, "Other device " + cardPath + " rejected");
+					Log.i(Utils.TAG, "Device name: " + cardPath + " rejected");
 					continue;
 				}
 				
 				MmcModell sdCard = new MmcModell();
-				
+						
 				sdCard.setType(3);
 				sdCard.setName(name);		
 				sdCard.setCid(Utils.UNKNOWN);
@@ -241,9 +254,17 @@ public class Mmc implements Runnable {
 				sdCard.setAheadUser("0");
 				sdCard.setSerial(getDeviceValue(name, SERIAL, false));
 				
-				
+				try {
+					if (sdCard.getSerial() == null) {
+						int hash = (sdCard.getName() + sdCard.getSize()).hashCode();
+						sdCard.setSerial(Integer.toHexString(hash));		
+					}
+				} catch (Exception e) {
+					Log.w(Utils.TAG, "buildDynamicDeviceList(): " + e.toString());
+				}
+						
 				if (sdCard.deviceIsOk()) {
-					list.add(sdCard);
+					mmcList.add(sdCard);
 
 					Log.i(Utils.TAG,
 							"Found: " + sdCard.getName() + "/"
@@ -262,11 +283,11 @@ public class Mmc implements Runnable {
 							+ sdCard.toString());
 				}	
 			} else {
-				Log.i(Utils.TAG, "Other device " + cardPath + " rejected");
+				Log.i(Utils.TAG, "Device " + cardPath + " rejected");
 			}
 		}
 		
-		if (list.size() == 0) {
+		if (mmcList.size() == 0) {
 			Log.w(Utils.TAG, "No other devices found!");
 			return false;
 		}
@@ -276,7 +297,11 @@ public class Mmc implements Runnable {
 
 	private boolean buildStaticDeviceList() {
 		
-		for (String cardPath : READ_AHEAD_PATH_LIST) {
+		for (String staticPath : READ_AHEAD_PATH_LIST) {
+			virtualList.add(staticPath);
+		}
+		
+		for (String cardPath : virtualList) {
 			
 			if (new File(cardPath).exists()) {
 				
@@ -299,7 +324,7 @@ public class Mmc implements Runnable {
 				sdCard.setSize(data[3]);	
 				sdCard.setAheadUser("0");
 				
-				list.add(sdCard);
+				mmcList.add(sdCard);
 				
 				Log.i(Utils.TAG, "Found: " 
 					+ sdCard.getName() + "/" 
@@ -316,7 +341,7 @@ public class Mmc implements Runnable {
 			}
 		}
 				
-		if (list.size() == 0) {
+		if (mmcList.size() == 0) {
 			Log.w(Utils.TAG, "No virtual devices found!");
 			return false;
 		}
@@ -328,7 +353,7 @@ public class Mmc implements Runnable {
 
 		kernel.allOnBoot = false;
 		kernel.allOnMonitor = false;
-		kernel.setArrayList(list);
+		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
 		Thread thread = new Thread(kernel);
@@ -339,7 +364,7 @@ public class Mmc implements Runnable {
 
 		kernel.allOnBoot = allOnBoot;
 		kernel.allOnMonitor = false;
-		kernel.setArrayList(list);
+		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
 		Thread thread = new Thread(kernel);
@@ -350,7 +375,7 @@ public class Mmc implements Runnable {
 
 		kernel.allOnBoot = false;
 		kernel.allOnMonitor = allOnMonitor;
-		kernel.setArrayList(list);
+		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
 		Thread thread = new Thread(kernel);
@@ -362,7 +387,7 @@ public class Mmc implements Runnable {
 
 		kernel.allOnBoot = allOnBoot;
 		kernel.allOnMonitor = allOnMonitor;
-		kernel.setArrayList(list);
+		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
 		Thread thread = new Thread(kernel);
@@ -370,7 +395,7 @@ public class Mmc implements Runnable {
 	}
 
 	public ArrayList<MmcModell> getList() {
-		return list;
+		return mmcList;
 	}
 
 	@SuppressWarnings("deprecation")

@@ -192,7 +192,7 @@ public class Kernel implements Runnable {
 					} else if (path.startsWith("/dev/block")) {
 						path = path.replace("/dev/block", "/sys/block");
 					}
-					Log.i(Utils.TAG, "Other device " + path + " added");
+					Log.i(Utils.TAG, "Device " + path + " added");
 					mountPoints.add(path);				
 				}
 			}
