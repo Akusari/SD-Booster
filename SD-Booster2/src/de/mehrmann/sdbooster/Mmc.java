@@ -175,19 +175,7 @@ public class Mmc implements Runnable {
 					if (sdCard.deviceIsOk()) {
 
 						mmcList.add(sdCard);
-
-						Log.i(Utils.TAG,
-								"Found: " + sdCard.getName() + "/"
-										+ sdCard.getCid() + "/"
-										+ sdCard.getCsd() + "/"
-										+ sdCard.getDate() + "/"
-										+ sdCard.getOemId() + "/"
-										+ sdCard.getManufactorId() + "/"
-										+ sdCard.getSerial() + "/"
-										+ sdCard.getAheadValue() + "/" + "p"
-										+ sdCard.getAheadPath() + "/"
-										+ sdCard.getSize() + "/"
-										+ sdCard.getType());
+						logCard(sdCard);
 					} else {
 						Log.e(Utils.TAG, "Device is not useable: MmcModell:"
 								+ sdCard.toString());
@@ -227,7 +215,7 @@ public class Mmc implements Runnable {
 					}
 				}
 				
-				Log.i(Utils.TAG, "Other device " + cardPath + " exist");
+				Log.i(Utils.TAG, "Device " + cardPath + " exist");
 				
 				String name;
 				if (data.length > 0) {
@@ -265,19 +253,7 @@ public class Mmc implements Runnable {
 						
 				if (sdCard.deviceIsOk()) {
 					mmcList.add(sdCard);
-
-					Log.i(Utils.TAG,
-							"Found: " + sdCard.getName() + "/"
-									+ sdCard.getCid() + "/"
-									+ sdCard.getCsd() + "/"
-									+ sdCard.getDate() + "/"
-									+ sdCard.getOemId() + "/"
-									+ sdCard.getManufactorId() + "/"
-									+ sdCard.getSerial() + "/"
-									+ sdCard.getAheadValue() + "/" + "p"
-									+ sdCard.getAheadPath() + "/"
-									+ sdCard.getSize() + "/"
-									+ sdCard.getType());
+					logCard(sdCard);
 				} else {
 					Log.w(Utils.TAG, "Device is not useable: MmcModell:"
 							+ sdCard.toString());
@@ -288,7 +264,7 @@ public class Mmc implements Runnable {
 		}
 		
 		if (mmcList.size() == 0) {
-			Log.w(Utils.TAG, "No other devices found!");
+			Log.w(Utils.TAG, "No dynamic devices found!");
 			return false;
 		}
 		
@@ -325,19 +301,7 @@ public class Mmc implements Runnable {
 				sdCard.setAheadUser("0");
 				
 				mmcList.add(sdCard);
-				
-				Log.i(Utils.TAG, "Found: " 
-					+ sdCard.getName() + "/" 
-					+ sdCard.getCid() + "/"
-					+ sdCard.getCsd() + "/" 
-					+ sdCard.getDate() + "/"
-					+ sdCard.getOemId() + "/"
-					+ sdCard.getManufactorId() + "/"
-					+ sdCard.getSerial() + "/"
-					+ sdCard.getAheadValue() + "/" + "p"
-					+ sdCard.getAheadPath() + "/"
-					+ sdCard.getSize() + "/"
-					+ sdCard.getType());
+				logCard(sdCard);
 			}
 		}
 				
@@ -396,6 +360,22 @@ public class Mmc implements Runnable {
 
 	public ArrayList<MmcModell> getList() {
 		return mmcList;
+	}
+	
+	private void logCard(final MmcModell card) {
+		
+		Log.i(Utils.TAG, "Found: " 
+				+ card.getName() + "/" 
+				+ card.getCid() + "/"
+				+ card.getCsd() + "/" 
+				+ card.getDate() + "/"
+				+ card.getOemId() + "/"
+				+ card.getManufactorId() + "/"
+				+ card.getSerial() + "/"
+				+ card.getAheadValue() + "/" + "p"
+				+ card.getAheadPath() + "/"
+				+ card.getSize() + "/"
+				+ card.getType());	
 	}
 
 	@SuppressWarnings("deprecation")
