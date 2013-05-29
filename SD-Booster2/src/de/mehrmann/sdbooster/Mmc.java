@@ -300,8 +300,15 @@ public class Mmc implements Runnable {
 				sdCard.setSize(data[3]);	
 				sdCard.setAheadUser("0");
 				
-				mmcList.add(sdCard);
-				logCard(sdCard);
+				// safty first
+				
+				if (new File(sdCard.getAheadPath()).exists()) {
+					mmcList.add(sdCard);
+					logCard(sdCard);
+				} else {
+					Log.e(Utils.TAG, "Ahead path is wrong! " + "MmcModell: "
+							+ sdCard.toString());
+				}
 			}
 		}
 				
