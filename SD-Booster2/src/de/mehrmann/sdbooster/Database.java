@@ -528,10 +528,8 @@ public class Database {
 			}
 
 			finally {
-				if (cursor != null)
-					cursor.close();
-				if (db != null)
-					db.close();
+				if (cursor != null) cursor.close();
+				if (db != null) db.close();
 
 				file.delete();
 			}
