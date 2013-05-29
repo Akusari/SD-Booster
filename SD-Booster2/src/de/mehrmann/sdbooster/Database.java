@@ -432,12 +432,9 @@ public class Database {
 	private ArrayList<MmcModell> setDbDataToModell(Cursor cursor) {
 
 		ArrayList<MmcModell> list = null;
-
-		if (cursor == null)
-			return list;
+		if (cursor == null) return list;
 
 		if (cursor.getCount() > 0) {
-
 			cursor.moveToFirst();
 			list = new ArrayList<MmcModell>();
 
