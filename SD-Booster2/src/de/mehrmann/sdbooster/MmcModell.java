@@ -205,6 +205,7 @@ public class MmcModell {
 		 * type 0 virtual 
 		 * type 1 mmcblk 
 		 * type 2 cardblksd
+		 * type 3 mountpoint based (virtual)
 		 */
 
 		if (type < 2) {
