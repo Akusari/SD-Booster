@@ -17,7 +17,7 @@
 -->
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verzija 2.0.3 © Daniel Mehrmann</string>
+    <string name="app_author">Verzija 2.0.4 © Daniel Mehrmann</string>
     <string name="app_design">Ikone napravio Jozef Kruszynski</string>
     <string name="menu_settings">Postavke</string>
     <string name="cbox_boot_all">Postavi sve uređaje sa startanjem sistema</string>
