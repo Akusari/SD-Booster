@@ -17,6 +17,8 @@
 
 package de.mehrmann.sdbooster;
 
+import java.util.ArrayList;
+
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
@@ -795,6 +797,17 @@ public class SDbooster extends Activity {
 		if (dir != null) {
 			text.append("System:\n");
 			text.append(dir);
+		}
+		
+		ArrayList<String> mount = new ArrayList<String>();
+		Kernel.addSDMount(mount);
+		
+		if (mount.size() > 0) {
+			text.append("Mounts:\n");
+			
+			for (String line : mount) {
+				text.append(line);
+			}
 		}
 
 		intent.putExtra(Intent.EXTRA_TEXT, text.toString());
