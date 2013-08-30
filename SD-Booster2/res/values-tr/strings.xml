@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+	<string name="app_name">SD-Booster</string>
+	<string name="app_author">Versiyon 2.0.4 © Daniel Mehrmann</string>
+	<string name="app_design">Tasarım: Jozef Kruszynski</string>
+	<string name="menu_settings">Ayarlar</string>
+	<string name="cbox_boot_all">Sistem başlangıcında tüm cihazları hazırla</string>
+	<string name="cbox_boot_card">Bu cihazı açılışta hazırla</string>
+	<string name="cbox_monitor_all">Tüm cihazları izle</string>
+	<string name="cbox_monitor_card">Bu cihazı izle</string>
+	<string name="cbox_size_all">Tüm cihazlar için önbellek:</string>
+	<string name="card_part_label">Boyut:</string>
+	<string name="card_cache_label">Önbellek:</string>
+	<string name="msg_error_no_card">Kullanılacak kart(lar) yok</string>
+	<string name="msg_error_no_root">SD-Booster root iznine sahip değil</string>
+	<string name="msg_error_no_setup">Önbellek değeri bulunamadı. Lütfen cihazınızı kurun</string>
+	<string name="msg_error_no_card_list">Hiç kart bulunamadı!</string>
+	<string name="msg_all_ok">Tüm önbellek değerleri başarıyla ayarlandı</string>
+	<string name="msg_box_override_enable">Bu seçenek kart ayarlarını geçersiz kılar</string>
+	<string name="msg_box_override_disable">Özellik geçersiz</string>
+	<string name="msg_kernel_cache_p1">Bu cihaz için</string>
+	<string name="msg_kernel_cache_p2">ön bellek değeri </string>
+	<string name="msg_kernel_cache_p3">olarak başarıyla ayarlandı.</string>
+	<string name="msg_kernel_cache_p4">olarak ayarlanamadı.</string>
+	<string name="msg_kernel_device_skip_p1">Cihaz</string>
+	<string name="msg_kernel_device_skip_p2">atlanacak</string>
+	<string name="msg_service_start">Servis başladı</string>
+	<string name="msg_service_stop">Servis durdu </string>
+	<string name="msg_service_ticker_new">Yeni cihaz bulundu. Lütfen kart(lar)ınızı kurun.</string>
+	<string name="msg_service_ticker_monitor_p1">Cihaz</string>
+	<string name="msg_service_ticker_monitor_p2">başarılı olarak ayarlandı, şuna:</string>
+	<string name="msg_service_ticker_value_p1">Cihaz</string>
+	<string name="msg_service_ticker_value_p2">yönetilemiyor.</string>
+	<string name="msg_new_card">yeni bir cihaz ve şu anda yönetilemiyor.</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">Lisans</string>
+	<string name="dlg_license_text">Cihazınıza gelebilecek her hangi bir zarardan SD-Booster sorumlu değildir.\nSD-Booster çalışabilmek için root iznine ihtiyaç duyar!\nOK tuşuna basarak bunu kabul edin veya iptal ederek uygulamadan ayrılın.</string>
+	<string name="dlg_info_label">Bilgi</string>
+	<string name="dlg_test_no_mount">Hiçbir SD-Card hazır değil</string>
+	<string name="dlg_card_info_name_label">İsim:</string>
+	<string name="dlg_card_info_part_label">Boyut:</string>
+	<string name="dlg_card_info_cache_label">Önbellek:</string>
+	<string name="dlg_card_info_date_label">Tarih:</string>
+	<string name="dlg_card_info_serial_label">Serial:</string>
+	<string name="dlg_setup_label">Kur</string>
+	<string name="dlg_setup_name_label">İsim:</string>
+	<string name="dlg_setup_cache_label">Önbellek boyutu (şu anki/kullanıcınınki):</string>
+	<string name="dlg_setup_cache_edit_label">Önbellek boyutu:</string>
+	<string name="dlg_setup_cache_size_error">Lütfen 128 ile 8192 arasında bir önbellek değeri kullanın</string>
+	<string name="dlg_setup_text">128 ile 8192 arasında bir değer seçin. 512, 1024 veya 2048 iyi bir seçim olabilir.</string>
+	<string name="dlg_progress_label">Hız testi</string>
+	<string name="dlg_progress_text">Test ediliyor. Bu biraz zaman alabilir…</string>
+	<string name="dlg_preference_label">Tercihler</string>
+	<string name="dlg_preference_store">Tercihler kaydedildi</string>
+	<string name="dlg_preference_background">Arkaplan güncellemeleri ve bildirimleri</string>
+	<string name="dlg_preference_interval">Güncelleme aralığı (saat):</string>
+	<string name="dlg_preference_note_boot">Başladığında bildir</string>
+	<string name="dlg_preference_note_monitor">İzlemede bildir</string>
+	<string name="dlg_preference_note_change">Durum değişikliğinde bildir</string>
+	<string name="dlg_preference_note_alarm">Bildiri gelirse uyar</string>
+	<string name="dlg_preference_note_ringtone">Uyarı için zil tonu seçin:</string>  
+</resources>
