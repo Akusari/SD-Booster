@@ -1,3 +1,14 @@
+version 2.0.5:
+-Allow apply button on old card values if available 
+-Added user notification if device failed on boot/change (user settings)
+-Added xxhdpi icons for xxhdpi devices
+-Fixed traditional chinese language
+-Added swedish language
+-Added turkish language
+-SDK upgrade to Android 4.4 KitKat
+
+
+
 version 2.0.4:
 -Fixed concurrent card list access (issue #1)
 -New virtual device list (based on mount points)
