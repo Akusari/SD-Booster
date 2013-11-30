@@ -477,9 +477,11 @@ public class SDbooster extends Activity {
 					boolean setup = false;
 
 					for (int i = 0; i < adapter.getCount(); i++) {
-						if (adapter.getItem(i).isSetup()) {
+						final MmcModell card = adapter.getItem(i);
+						
+						if (card.isSetup() || !card.getAheadUser().equals("0")) {
 							setup = true;
-							break;
+							break;	
 						}
 					}
 
