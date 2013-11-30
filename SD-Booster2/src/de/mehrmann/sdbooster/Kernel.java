@@ -87,7 +87,7 @@ public class Kernel implements Runnable {
 
 	public static String getLogcat() {
 
-		// android.permission.READ_LOGS not needed
+		// android.permission.READ_LOGS not needed (root access)
 
 		String log = null;
 

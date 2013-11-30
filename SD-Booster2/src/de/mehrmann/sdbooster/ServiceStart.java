@@ -113,6 +113,16 @@ public class ServiceStart extends Service {
 								+ getString(R.string.msg_kernel_cache_p4);
 
 						Log.i(Utils.TAG, text);
+						
+						if (onBoot) {
+							if (useBootNote) {
+								userNotification(card, 4);
+							}
+						} else if (onChange) {
+							if (useChangeNote) {
+								userNotification(card, 4);
+							}
+						}
 
 					} else if (msg.arg2 == 5) {
 
@@ -390,7 +400,7 @@ public class ServiceStart extends Service {
 
 	private void userNotification(final MmcModell card, int action) {
 
-		String text;
+		String text = null;
 
 		if (action == 0) {
 
@@ -406,6 +416,7 @@ public class ServiceStart extends Service {
 					+ card.getName() + " "
 					+ getString(R.string.msg_service_ticker_monitor_p2) + " "
 					+ card.getAheadUser();
+			
 		} else if (action == 2) {
 
 			// unmanaged device
@@ -419,6 +430,14 @@ public class ServiceStart extends Service {
 			// License through properties
 
 			text = getString(R.string.dlg_license_label);
+			
+		} else if (action == 4) {
+
+			// device failed
+
+			text = getString(R.string.msg_kernel_cache_p1)
+					+ " " + card.getName() + " "
+					+ getString(R.string.msg_kernel_cache_p4);
 
 		} else {
 			throw new RuntimeException();
@@ -449,6 +468,13 @@ public class ServiceStart extends Service {
 
 			intent.setClass(context, SDbooster.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		
+		} else if (action == 4) {
+			
+			// device failed
+			
+			intent.setClass(context, SDbooster.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);		
 		}
 
 		PendingIntent pending = PendingIntent.getActivity(context, 0, intent,
@@ -481,10 +507,12 @@ public class ServiceStart extends Service {
 			}
 		}
 
-		// license
+		// license & device failed
 
 		if (action == 3) {
 			id += 3;
+		} else if (action == 4) {
+			id += 4;
 		}
 
 		manager.notify(id, note);

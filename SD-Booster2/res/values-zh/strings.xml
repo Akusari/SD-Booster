@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">版本 2.0.4 © Daniel Mehrmann</string>
+    <string name="app_author">版本 2.0.5 © Daniel Mehrmann</string>
     <string name="app_design">美術設計 Jozef Kruszynski</string>
      <string name="menu_settings">設定</string>
     <string name="cbox_boot_all">設定開機時啟動</string>

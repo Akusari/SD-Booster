@@ -778,7 +778,7 @@ public class SDbooster extends Activity {
 	private void sendReport() {
 
 		Intent intent = new Intent(Intent.ACTION_SENDTO);
-		Uri uri = Uri.parse("mailto:daniel.mehrmann@gmx.de?subject=Bugreport");
+		Uri uri = Uri.parse("mailto:sd-booster@gmx.com?subject=Bugreport");
 		intent.setData(uri);
 
 		StringBuilder text = new StringBuilder();
