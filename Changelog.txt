@@ -7,8 +7,6 @@ version 2.0.5:
 -Added turkish language
 -SDK upgrade to Android 4.4 KitKat
 
-
-
 version 2.0.4:
 -Fixed concurrent card list access (issue #1)
 -New virtual device list (based on mount points)
