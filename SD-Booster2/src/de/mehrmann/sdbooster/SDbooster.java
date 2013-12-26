@@ -581,6 +581,15 @@ public class SDbooster extends Activity {
 								showMessage(5, null);
 								v.setText(null);
 							}
+							
+							Bundle bundle = getIntent().getExtras();
+							
+							if (bundle != null) {
+								if (bundle.getInt(Utils.CACHE_ALL) > 0) {	
+									getWindow().setSoftInputMode(
+										       WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+								}
+							}			
 						}
 						return false;
 					}
