@@ -585,7 +585,7 @@ public class SDbooster extends Activity {
 							Bundle bundle = getIntent().getExtras();
 							
 							if (bundle != null) {
-								if (bundle.getInt(Utils.CACHE_ALL) > 0) {	
+								if (bundle.containsKey(Utils.CACHE_ALL)) {	
 									getWindow().setSoftInputMode(
 										       WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 								}
