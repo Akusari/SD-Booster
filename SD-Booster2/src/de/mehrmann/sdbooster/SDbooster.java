@@ -580,6 +580,8 @@ public class SDbooster extends Activity {
 
 								showMessage(5, null);
 								v.setText(null);
+							} else {
+								setPref("size", Integer.valueOf(input));
 							}
 							
 							Bundle bundle = getIntent().getExtras();
