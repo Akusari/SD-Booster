@@ -185,7 +185,8 @@ public class SDbooster extends Activity {
 					if (isChecked) {
 						Database db = getDbInstance();
 						int allSize = db.getPref(5, 0);
-						if (allSize >= 128 && allSize <= 8192 && allSize != 128) {
+						
+						if (Utils.cacheSizeIsOk(allSize)) {
 							uiCacheSize.setText(String.valueOf(allSize));
 						}
 					} else {
@@ -310,8 +311,7 @@ public class SDbooster extends Activity {
 							Database db = getDbInstance();
 							int allSize = db.getPref(5, 0); // User size
 
-							if (allSize >= 128 && allSize <= 8192
-									&& allSize != 128) {
+							if (Utils.cacheSizeIsOk(allSize)) {
 								uiCacheSize.setText(String.valueOf(allSize));
 							}
 						} else {
@@ -325,14 +325,18 @@ public class SDbooster extends Activity {
 
 						Bundle bundle = getIntent().getExtras();
 						String serial = null;
+						int cacheAll = -1;
 
 						if (bundle != null) {
 							serial = bundle.getString(Utils.SERIAL);
+							cacheAll = bundle.getInt(Utils.CACHE_ALL);
 						}
 
 						if (serial != null) {
-							showSetup(serial);
-						}
+							showSetup(serial);	
+						} else if (cacheAll != -1) {
+							showEditText();
+						}					
 
 					} else {
 						mmcDetection = false;
@@ -678,6 +682,15 @@ public class SDbooster extends Activity {
 			dialog.useIcon();
 			dialog.show();
 		}
+	}
+	
+	private void showEditText() {
+		
+		getWindow().setSoftInputMode(
+			       WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+		
+		uiCacheSize.requestFocus();		
+		showMessage(5, null);	
 	}
 
 	private void setPref(String tag, int value) {

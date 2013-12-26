@@ -38,6 +38,7 @@
 	<string name="msg_error_no_root">SD-Booster has no root permission</string>
 	<string name="msg_error_no_setup">No cache values found. Please setup your devices</string>
 	<string name="msg_error_no_card_list">No cards found!</string>
+	<string name="msg_error_no_cache_all">"No cache value for all devices found"</string>
 	<string name="msg_all_ok">All cache values successful updated</string>
 	<string name="msg_box_override_enable">This option override card settings</string>
 	<string name="msg_box_override_disable">Feature disabled</string>

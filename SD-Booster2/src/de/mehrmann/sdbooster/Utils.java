@@ -36,6 +36,7 @@ public abstract class Utils {
 	public static final String CHANGE = "change";
 	public static final String SERIAL = "serial";
 	public static final String UNKNOWN = "unknown";
+	public static final String CACHE_ALL = "cache_all";
 
 	public static final String TAG = "SD-Booster";
 
@@ -121,7 +122,16 @@ public abstract class Utils {
 
 		int value = Integer.parseInt(size);
 
-		if (value < 128 || value > 8192) {
+		if (value <= 128 || value > 8192) {
+			return false;
+		}
+
+		return true;
+	}
+	
+	public static boolean cacheSizeIsOk(int size) {
+
+		if (size <= 128 || size > 8192) {
 			return false;
 		}
 
