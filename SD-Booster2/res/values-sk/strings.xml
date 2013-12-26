@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verzia 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Verzia 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikony od Jozef Kruszynski</string>
     <string name="menu_settings">Nastavenia</string>
     <string name="cbox_boot_all">Nastaviť všetky zariadenia pri štarte systému</string>
@@ -32,6 +32,7 @@
 	<string name="msg_error_no_root">SD-Booster nemá ROOT povolenie</string>
 	<string name="msg_error_no_setup">Nenájdené žiadne cache hodnoty. Prosím nastavte si zariadenie</string>
 	<string name="msg_error_no_card_list">Nenájdené žiadne karty!</string>
+	<string name="msg_error_no_cache_all">"No cache value for all devices found"</string>
 	<string name="msg_all_ok">Všetky cache hodnoty boli úspešne aktualizované</string>
 	<string name="msg_box_override_enable">Táto voľba prepíše nastavenia karty</string>
 	<string name="msg_box_override_disable">Funkcia vypnutá</string>

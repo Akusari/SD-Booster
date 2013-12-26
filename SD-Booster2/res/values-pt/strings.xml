@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Versão 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Versão 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Icons por Jozef Kruszynski</string>
     <string name="menu_settings">Definições</string>
     <string name="cbox_boot_all">Montar todos os dispositivos no arranque do sistema</string>
@@ -33,6 +33,7 @@
     <string name="msg_error_no_root">SD-Booster não tem permissões de root</string>
     <string name="msg_error_no_setup">Não foram encontrados valores de cache. Por favor configure os seus dispositivos</string>
     <string name="msg_error_no_card_list">Não foi encontrado nenhum cartão de memória!</string>
+    <string name="msg_error_no_cache_all">"Nenhum valor de cache para todos os dispositivos encontrados"</string>
     <string name="msg_all_ok">Todos os valores de cache foram actualizados com sucesso</string>
     <string name="msg_box_override_enable">Esta opção sobrepõem-se às definições do cartão</string>
     <string name="msg_box_override_disable">Opção indisponível</string>

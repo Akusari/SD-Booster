@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verzió 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Verzió 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Az ikonokat Jozef Kruszynski készítette</string>
     <string name="menu_settings">Beállítások</string>
     <string name="cbox_boot_all">Bootoláskor alkalmazza minden elemre</string>
@@ -33,6 +33,7 @@
 	<string name="msg_error_no_root">Az SD-Booster-nek nincs root jogosultsága</string>
 	<string name="msg_error_no_setup">Nem találhatóak gyorsítótár értékek.</string>
 	<string name="msg_error_no_card_list">Nem találhatóak SD kártyák!</string>
+	<string name="msg_error_no_cache_all">"Nincs cache értéke az összes eszköz megtalálható"</string>
 	<string name="msg_all_ok">Gyorsítótár értékek sikeresen frissítve</string>
 	<string name="msg_box_override_enable">Ez az opció felülírja a kártya beállításait</string>
 	<string name="msg_box_override_disable">Szolgáltatás kikapcsolva</string>

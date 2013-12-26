@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">版本 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">版本 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">美術設計 Jozef Kruszynski</string>
      <string name="menu_settings">設定</string>
     <string name="cbox_boot_all">設定開機時啟動</string>
@@ -33,6 +33,7 @@
     <string name="msg_error_no_root">SD-Booster沒有成功取得root權限</string>
     <string name="msg_error_no_setup">未發現快取設定值。請重新設定</string>
     <string name="msg_error_no_card_list">未發現記憶卡！</string>
+    <string name="msg_error_no_cache_all">"没有找到的所有设备的缓存值"</string>
     <string name="msg_all_ok">所有的快取已成功更新</string>
     <string name="msg_box_override_enable">此選項會覆寫記憶卡的預設值</string>
     <string name="msg_box_override_disable">關閉</string>

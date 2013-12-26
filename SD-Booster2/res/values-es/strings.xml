@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Version 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Version 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Iconos por Jozef Kruszynski</string>
     <string name="menu_settings">Configuración</string>
     <string name="cbox_boot_all">Establece todos los dispositivos al inicio del sistema</string>
@@ -33,6 +33,7 @@
 	<string name="msg_error_no_root">SD-Booster no tiene permisos "root"</string>
 	<string name="msg_error_no_setup">No se han encontrado valores de caché. Por favor, configure sus dispositivos</string>
 	<string name="msg_error_no_card_list">¡No se han encontrado tarjetas!</string>
+	<string name="msg_error_no_cache_all">"Se desconoce el valor de caché para todos los dispositivos que se encuentran"</string>
 	<string name="msg_all_ok">Todos los valores de caché han sido actualizados con éxito</string>
 	<string name="msg_box_override_enable">Esta opción sobreescribe la configuración de la tarjeta</string>
 	<string name="msg_box_override_disable">Característica deshabilitada</string>

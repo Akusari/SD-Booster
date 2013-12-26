@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verzija 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Verzija 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikone od Jozef Kruszynski</string>
     <string name="menu_settings">Nastavitve</string>
     <string name="cbox_boot_all">Nastavi vse naprave ob zagonu sistema</string>
@@ -32,6 +32,7 @@
 	<string name="msg_error_no_root">SD-Booster nima dovoljenja roota</string>
 	<string name="msg_error_no_setup">Vrednosti pomnilnika niso najdene. Nastavi svojo napravo</string>
 	<string name="msg_error_no_card_list">SD kartica ni najdena</string>
+	<string name="msg_error_no_cache_all">"No cache value for all devices found"</string>
 	<string name="msg_all_ok">Vse vrednosti pomnilnika uspešno nastavljene</string>
 	<string name="msg_box_override_enable">Ta nastavitev povozi nastavitve sd kartice</string>
 	<string name="msg_box_override_disable">Funkcija je onemogočena</string>

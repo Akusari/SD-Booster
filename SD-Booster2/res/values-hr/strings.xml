@@ -17,7 +17,7 @@
 -->
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verzija 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Verzija 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikone napravio Jozef Kruszynski</string>
     <string name="menu_settings">Postavke</string>
     <string name="cbox_boot_all">Postavi sve uređaje sa startanjem sistema</string>
@@ -31,6 +31,7 @@
     <string name="msg_error_no_root">SD-Booster nema root dopuštenje</string>
     <string name="msg_error_no_setup">Nisu nađene vrijednosti cachea. Please setup your devices</string>
     <string name="msg_error_no_card_list">Kartica nije pronađena!</string>
+    <string name="msg_error_no_cache_all">"No cache value for all devices found"</string>
     <string name="msg_all_ok">Sve vrijednosti cachea su uspješno ažurirane</string>
     <string name="msg_box_override_enable">Ova opcija premošćuje postavke kartice</string>
     <string name="msg_box_override_disable">Onemogućeno</string>

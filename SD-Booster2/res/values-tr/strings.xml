@@ -18,7 +18,7 @@
 
 <resources>
 	<string name="app_name">SD-Booster</string>
-	<string name="app_author">Versiyon 2.0.5 © Daniel Mehrmann</string>
+	<string name="app_author">Versiyon 2.0.6 © Daniel Mehrmann</string>
 	<string name="app_design">Tasarım: Jozef Kruszynski</string>
 	<string name="menu_settings">Ayarlar</string>
 	<string name="cbox_boot_all">Sistem başlangıcında tüm cihazları hazırla</string>
@@ -32,6 +32,7 @@
 	<string name="msg_error_no_root">SD-Booster root iznine sahip değil</string>
 	<string name="msg_error_no_setup">Önbellek değeri bulunamadı. Lütfen cihazınızı kurun</string>
 	<string name="msg_error_no_card_list">Hiç kart bulunamadı!</string>
+	<string name="msg_error_no_cache_all">"Bulunan tüm cihazlar için hiçbir önbellek değeri"</string>
 	<string name="msg_all_ok">Tüm önbellek değerleri başarıyla ayarlandı</string>
 	<string name="msg_box_override_enable">Bu seçenek kart ayarlarını geçersiz kılar</string>
 	<string name="msg_box_override_disable">Özellik geçersiz</string>
