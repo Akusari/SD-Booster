@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Version 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Version 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikoner av Jozef Kruszynski</string>
     <string name="menu_settings">Inställningar</string>
     <string name="cbox_boot_all">Sätt alla enheter vid systemstart</string>
@@ -32,6 +32,7 @@
     <string name="msg_error_no_root">SD-Booster saknar rootbehörighet</string>
     <string name="msg_error_no_setup">Inga lagrade värden funna. Vänligen ställ din enhet</string>
     <string name="msg_error_no_card_list">Inga minneskort funna!</string>
+    <string name="msg_error_no_cache_all">"Ingen cache värde för alla enheter som finns"</string>
     <string name="msg_all_ok">Alla cache-värden uppdaterade</string>
     <string name="msg_box_override_enable">Detta alternativ ignorerar kortets inställningar</string>
     <string name="msg_box_override_disable">Alternativ inaktiverat</string>

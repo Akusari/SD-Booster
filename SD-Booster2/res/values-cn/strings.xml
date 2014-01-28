@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">版本 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">版本 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">美术设计 Jozef Kruszynski</string>
     <string name="menu_settings">设定</string>
     <string name="cbox_boot_all">设定开机时启动</string>
@@ -33,6 +33,7 @@
     <string name="msg_error_no_root">SD-Booster没有成功取得root权限</string>
     <string name="msg_error_no_setup">未发现高速缓存.请重新设定</string>
     <string name="msg_error_no_card_list">未发现记忆卡!</string>
+    <string name="msg_error_no_cache_all">"沒有找到的所有設備的緩存值"</string>
     <string name="msg_all_ok">所有的高速缓存已成功更新</string>
     <string name="msg_box_override_enable">此选项会覆写记忆卡的默认值</string>
     <string name="msg_box_override_disable">关闭</string>

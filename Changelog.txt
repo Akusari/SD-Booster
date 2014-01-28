@@ -1,3 +1,7 @@
+Version 2.0.6:
+-Fixed cache for all cards enabled but no value for all cards found
+-Cache value for all cards saved immediately now (database) (instead of waiting for apply button)
+
 version 2.0.5:
 -Allow apply button on old card values if available 
 -Added user notification if device failed on boot/change (user settings)

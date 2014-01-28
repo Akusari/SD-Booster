@@ -342,6 +342,13 @@ public class ServiceStart extends Service {
 		}
 
 		if (job) {
+			
+			if (allCache && !Utils.cacheSizeIsOk(allSize)) {
+				userNotification(null, 5);
+				Log.e(Utils.TAG, getString(R.string.msg_error_no_cache_all));
+				stopSelf();
+			}
+			
 			this.cards.setToKernel(allCache == true ? allSize : 0, allBoot);
 		} else {
 			stopSelf();
@@ -362,6 +369,13 @@ public class ServiceStart extends Service {
 		}
 
 		if (job) {
+			
+			if (allCache && !Utils.cacheSizeIsOk(allSize)) {
+				userNotification(null, 5);
+				Log.e(Utils.TAG, getString(R.string.msg_error_no_cache_all));
+				stopSelf();
+			}
+			
 			this.cards.monitorToKernel(allCache == true ? allSize : 0,
 					allMonitor);
 		} else {
@@ -391,6 +405,13 @@ public class ServiceStart extends Service {
 		}
 
 		if (job) {
+			
+			if (allCache && !Utils.cacheSizeIsOk(allSize)) {
+				userNotification(null, 5);
+				Log.e(Utils.TAG, getString(R.string.msg_error_no_cache_all));
+				stopSelf();
+			}
+			
 			this.cards.changeToKernel(allCache == true ? allSize : 0, allCache,
 					allBoot);
 		} else {
@@ -438,6 +459,12 @@ public class ServiceStart extends Service {
 			text = getString(R.string.msg_kernel_cache_p1)
 					+ " " + card.getName() + " "
 					+ getString(R.string.msg_kernel_cache_p4);
+			
+		} else if (action == 5) {
+
+			// setting error
+
+			text = getString(R.string.msg_error_no_cache_all);
 
 		} else {
 			throw new RuntimeException();
@@ -475,6 +502,14 @@ public class ServiceStart extends Service {
 			
 			intent.setClass(context, SDbooster.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);		
+		
+		} else if (action == 5) {
+			
+			// setting error
+			
+			intent.setClass(context, SDbooster.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			intent.putExtra(Utils.CACHE_ALL, allSize);
 		}
 
 		PendingIntent pending = PendingIntent.getActivity(context, 0, intent,
@@ -491,7 +526,7 @@ public class ServiceStart extends Service {
 
 		NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-		int id;
+		int id = 0;
 
 		try {
 			id = Integer.valueOf((int) card.getId());
@@ -507,12 +542,14 @@ public class ServiceStart extends Service {
 			}
 		}
 
-		// license & device failed
+		// license, device failed and error setting
 
 		if (action == 3) {
 			id += 3;
 		} else if (action == 4) {
 			id += 4;
+		} else if (action == 5) {
+			id += 5;
 		}
 
 		manager.notify(id, note);

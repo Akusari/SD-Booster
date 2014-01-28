@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Versi 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Versi 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikon oleh Jozef Kruszynski</string>
     <string name="menu_settings">Pengaturan</string>
     <string name="cbox_boot_all">Atur semua perangkat pada sistem start</string>
@@ -32,6 +32,7 @@
 	<string name="msg_error_no_root">SD-Booster tidak memiliki ijin root</string>
 	<string name="msg_error_no_setup">Tidak ada nilai cache yang ditemukan. Silahkan mengatur perangkat anda</string>
 	<string name="msg_error_no_card_list">Tidak ada kartu yang ditemukan!</string>
+	<string name="msg_error_no_cache_all">"Tidak ada nilai cache untuk semua perangkat yang ditemukan"</string>
 	<string name="msg_all_ok">Semua nilai cache berhasil diperbarui</string>
 	<string name="msg_box_override_enable">Pilihan ini mengesampingkan pengaturan kartu</string>
 	<string name="msg_box_override_disable">Fitur dimatikan</string>

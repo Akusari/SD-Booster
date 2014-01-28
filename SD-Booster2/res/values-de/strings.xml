@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Version 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Version 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Icons by Jozef Kruszynski</string>
     <string name="menu_settings">Einstellungen</string>
     <string name="cbox_boot_all">Alle Karten beim Systemstart setzen</string>
@@ -33,6 +33,7 @@
 	<string name="msg_error_no_root">SD-Booster hat keine Root-Berechtigung</string>
 	<string name="msg_error_no_setup">Keine Cachegröße gefunden. Bitte richten Sie ihre Karten ein.</string>
 	<string name="msg_error_no_card_list">Keine Karten gefunden!</string>
+	<string name="msg_error_no_cache_all">"Keine Cachegröße für alle Karten gefunden"</string>
 	<string name="msg_all_ok">Alle Cachegrößen erfolgreich aktualisiert!</string>
 	<string name="msg_box_override_enable">Diese Option überschreibt die Karteneinstellungen.</string>
 	<string name="msg_box_override_disable">Option deaktiviert</string>

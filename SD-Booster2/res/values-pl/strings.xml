@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Wersja 2.0.5 © Daniel Mehrmann</string>
+    <string name="app_author">Wersja 2.0.6 © Daniel Mehrmann</string>
     <string name="app_design">Ikony stworzone przez Józefa Kruszyńskiego</string>
     <string name="menu_settings">Ustawienia</string>
     <string name="cbox_boot_all">Ustaw przy starcie dla obu pamięci</string>
@@ -33,6 +33,7 @@
 	<string name="msg_error_no_root">SD-Booster nie ma dostępu do uprawień ROOT-a</string>
 	<string name="msg_error_no_setup">Nie odnaleziono zapamiętanych wartości. Proszę ustaw swoje urządzenie</string>
 	<string name="msg_error_no_card_list">Nie odnaleziono karty!</string>
+	<string name="msg_error_no_cache_all">"Brak wartości cache dla wszystkich urządzeń znajdujących"</string>
 	<string name="msg_all_ok">Wszystkie wartości pamięci zostały poprawnie zaktualizowane</string>
 	<string name="msg_box_override_enable">Ta opcja nadpiszę ustawienia karty SD</string>
 	<string name="msg_box_override_disable">Opcja wyłączona</string>
