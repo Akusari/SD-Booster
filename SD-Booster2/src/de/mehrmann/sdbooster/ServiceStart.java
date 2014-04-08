@@ -302,7 +302,7 @@ public class ServiceStart extends Service {
 			return;
 		}
 
-		for (MmcModell card : this.cards.getList()) {
+		for (MmcModell card : mmcList) {
 
 			if (!db.cardExist(card)) {
 				card.setId(db.cardInsert(card));
