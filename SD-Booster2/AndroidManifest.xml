@@ -58,12 +58,12 @@
         </activity>
         
         <service
-            android:name="ServiceStart"
+            android:name="de.mehrmann.sdbooster.ServiceStart"
             android:icon="@drawable/ic_launcher" >
         </service>
         
         <receiver
-            android:name="ServiceBoot"
+            android:name="de.mehrmann.sdbooster.ServiceBoot"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
             
             <intent-filter>
@@ -72,7 +72,7 @@
         </receiver>
         
         <receiver 
-            android:name="ServiceCall" >
+            android:name="de.mehrmann.sdbooster.ServiceCall" >
             
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
