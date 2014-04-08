@@ -97,7 +97,6 @@ public class Mmc implements Runnable {
 		this.handler = handler;
 
 		kernel = new Kernel(handler, state);
-		
 		mmcList = new ArrayList<MmcModell>();
 		virtualList = new ArrayList<String>();
 	}
@@ -105,8 +104,8 @@ public class Mmc implements Runnable {
 	@Override
 	public void run() {
 
-		mmcList = new ArrayList<MmcModell>();
-		virtualList = new ArrayList<String>();
+		mmcList = new ArrayList<MmcModell>(8);
+		virtualList = new ArrayList<String>(8);
 		
 		boolean detected = buildDeviceList();
 		
@@ -370,10 +369,6 @@ public class Mmc implements Runnable {
 
 	public ArrayList<MmcModell> getList() {
 		return mmcList;
-	}
-	
-	public int getListSize() {
-		return mmcList.size();	
 	}
 	
 	private void logCard(final MmcModell card) {

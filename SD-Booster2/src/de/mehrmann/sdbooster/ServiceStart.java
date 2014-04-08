@@ -16,6 +16,8 @@
 
 package de.mehrmann.sdbooster;
 
+import java.util.ArrayList;
+
 import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -56,12 +58,16 @@ public class ServiceStart extends Service {
 	private boolean propExists;
 
 	private Mmc cards;
+	
+	private volatile boolean lock;
 
 	@SuppressLint("HandlerLeak")
 	@Override
 	public void onCreate() {
 
 		super.onCreate();
+		
+		lock = false;
 
 		context = this;
 		handler = new Handler() {
@@ -275,9 +281,26 @@ public class ServiceStart extends Service {
 	}
 
 	private void updateDbToModell() {
+		
+		// prevent concurrent access
+		
+		if (!this.lock) {
+			this.lock = true;
+		} else {
+			Log.e(Utils.TAG, "updateDbToModell(): lock found!");
+			return;
+		}
 
 		MmcModell dbCard;
 		Database db = getDbInstance();
+		
+		ArrayList<MmcModell> mmcList = this.cards.getList();
+		
+		if (mmcList == null || mmcList.size() == 0) {
+			Log.e(Utils.TAG, getString(R.string.msg_error_no_card));
+			this.lock = false;
+			return;
+		}
 
 		for (MmcModell card : this.cards.getList()) {
 
@@ -321,6 +344,8 @@ public class ServiceStart extends Service {
 				card.setSetup(true);
 			}
 		}
+		
+		this.lock = false;
 	}
 
 	private void setOnBoot() {
