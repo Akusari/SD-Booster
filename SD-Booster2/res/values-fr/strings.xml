@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Version 2.0.6 © Daniel Mehrmann</string>
+    <string name="app_author">Version 2.0.7 © Daniel Mehrmann</string>
     <string name="app_design">Icons by Jozef Kruszynski</string>
     <string name="menu_settings">Réglages</string>
     <string name="cbox_boot_all">Définir tous les périphériques au démarrage</string>

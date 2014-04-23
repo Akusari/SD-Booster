@@ -18,7 +18,7 @@
 
 <resources>
 	<string name="app_name">SD-Booster</string>
-	<string name="app_author">Versiyon 2.0.6 © Daniel Mehrmann</string>
+	<string name="app_author">Versiyon 2.0.7 © Daniel Mehrmann</string>
 	<string name="app_design">Tasarım: Jozef Kruszynski</string>
 	<string name="menu_settings">Ayarlar</string>
 	<string name="cbox_boot_all">Sistem başlangıcında tüm cihazları hazırla</string>

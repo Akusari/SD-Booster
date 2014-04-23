@@ -18,8 +18,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.mehrmann.sdbooster"
-    android:versionCode="07192060"
-    android:versionName="2.0.6" 
+    android:versionCode="07192070"
+    android:versionName="2.0.7" 
     android:installLocation="internalOnly">
 
     <uses-sdk

@@ -18,7 +18,7 @@
 
 <resources>
     <string name="app_name">SD-Booster</string>
-    <string name="app_author">Verze 2.0.6 © Daniel Mehrmann</string>
+    <string name="app_author">Verze 2.0.7 © Daniel Mehrmann</string>
     <string name="app_design">Icony od Jozef Kruszynski</string>
     <string name="menu_settings">Nastavení</string>
     <string name="cbox_boot_all">Nastavit všechna zařízení při startu systému</string>
