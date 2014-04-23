@@ -1,3 +1,8 @@
+Version 2.0.7:
+-Fixed NullPointerException on database model
+-Fixed concurrent access on card list (service)
+-Fixed class name call (Manifest.xml)
+
 Version 2.0.6:
 -Fixed cache for all cards enabled but no value for all cards found
 -Cache value for all cards saved immediately now (database) (instead of waiting for apply button)
