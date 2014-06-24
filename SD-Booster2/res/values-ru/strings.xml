@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">SD-Booster</string>
+    <string name="app_author">Версия 2.0.7 © Daniel Mehrmann</string>
+    <string name="app_design"> Иконки Jozef Kruszynski</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="cbox_boot_all">Установите все устройства при запуске системы</string>
+    <string name="cbox_boot_card">Установить данное устройство при загрузке</string>
+    <string name="cbox_monitor_all">Мониторинг всех устройств</string>
+    <string name="cbox_monitor_card">Контролировать это устройство</string>
+    <string name="cbox_size_all">Кэш для всех устройств:</string>
+    <string name="card_part_label">Размер:</string>
+    <string name="card_cache_label">Кэш:</string>
+    <string name="card_size_label">Вирт.размер</string>   
+    <string name="msg_error_no_card">Отсутствует какой либо съемный носитель</string>
+    <string name="msg_error_no_root">Для иcпользования нужны права ROOT</string>
+    <string name="msg_error_no_setup">Кэш не найден. Пожалуйста настройте устройство</string>
+    <string name="msg_error_no_card_list">Карта памяти отсутствует!</string>
+    <string name="msg_error_no_cache_all">Кэш не найден. Пожалуйста настройте устройство</string>
+    <string name="msg_all_ok">Кэш успешно обнавлен</string>
+    <string name="msg_box_override_enable">Этот параметр переопределяет параметры карты</string>
+    <string name="msg_box_override_disable">Функция отключена</string>
+    <string name="msg_box_logical">Опция включена,но обновление активно!</string>
+    <string name="msg_kernel_cache_p1">Установка кэша для устройства</string>
+    <string name="msg_kernel_cache_p2">для</string>
+    <string name="msg_kernel_cache_p3">успешно</string>
+    <string name="msg_kernel_cache_p4">не найден</string>
+    <string name="msg_kernel_device_skip_p1">Устройство</string>
+    <string name="msg_kernel_device_skip_p2">будет пропущен</string>
+    <string name="msg_service_start">Сервис запущен</string>
+    <string name="msg_service_stop">Сервис остановлен</string>
+    <string name="msg_service_ticker_new">Обнаружено новое устройство. Пожалуйста настройте вашу карту (ы)</string>
+    <string name="msg_service_ticker_monitor_p1">Устройство</string>
+    <string name="msg_service_ticker_monitor_p2">Успешная установка для</string>
+    <string name="msg_service_ticker_value_p1">Устройство</string>
+    <string name="msg_service_ticker_value_p2">не управляется</string>
+    <string name="msg_new_card">это новое устройство.И в данное время работа с ним пока не возможна</string>
+    <string name="edit_hint_label">KB</string>
+    <string name="dlg_license_label">Лицензия</string>
+    <string name="dlg_license_text">"SD-Booster не несет ответственности за какой-либо ущерб вашему смартфону.
+ Для работы  SD-Booste требуется ROOT! 
+ Пожалуйста, примите это, используя кнопку OK или выйдите из программы нажав отмена."</string>
+    <string name="dlg_info_label">Инфо</string>
+    <string name="dlg_test_no_mount">Карта не установлена</string>
+    <string name="dlg_card_info_name_label">Название:</string>
+    <string name="dlg_card_info_part_label">Размер:</string>
+    <string name="dlg_card_info_cache_label">Кэш:</string>
+    <string name="dlg_card_info_date_label">Дата:</string>
+    <string name="dlg_card_info_serial_label">Номер:</string>
+    <string name="dlg_card_info_unknown_label">неизвестно</string>
+    <string name="dlg_setup_label">Установка</string>
+    <string name="dlg_setup_name_label">Название:</string>
+    <string name="dlg_setup_cache_label">Размер кэша (текущий/пользовательский):</string>
+    <string name="dlg_setup_cache_edit_label">Размер кэша:</string>
+    <string name="dlg_setup_cache_size_error">Пожалуйста, используйте значение от 128 до 8192</string>
+    <string name="dlg_setup_text">Выберите размер кэшаот 128 до 8192. Но не менее 512, 1024 или 2048.</string>
+    <string name="dlg_progress_label">Тест</string>
+    <string name="dlg_progress_text">Тест запущен.Может занять время</string>
+    <string name="dlg_preference_label">Предпочтение</string>
+    <string name="dlg_preference_store">Предпочтение сохранено</string>
+    <string name="dlg_preference_background">Фоновые обновления и уведомления</string>
+    <string name="dlg_preference_interval">Интервал обновления(час.):</string>
+    <string name="dlg_preference_note_boot">Уведомления о загрузке</string>
+    <string name="dlg_preference_note_monitor">Уведомление на мониторе</string>
+    <string name="dlg_preference_note_change">Уведомления об изменении</string>
+    <string name="dlg_preference_note_alarm">Сигнал при уведомлении</string>
+    <string name="dlg_preference_note_ringtone">Рингтон:</string>
+</resources>
