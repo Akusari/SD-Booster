@@ -124,6 +124,10 @@ public class ServiceStart extends Service {
 							if (useBootNote) {
 								userNotification(card, 4);
 							}
+						} else if (onMonitor) {
+							if (useMonitorNote) {
+								userNotification(card, 4);
+							}
 						} else if (onChange) {
 							if (useChangeNote) {
 								userNotification(card, 4);
@@ -367,7 +371,6 @@ public class ServiceStart extends Service {
 		}
 
 		if (job) {
-			
 			if (allCache && !Utils.cacheSizeIsOk(allSize)) {
 				userNotification(null, 5);
 				Log.e(Utils.TAG, getString(R.string.msg_error_no_cache_all));

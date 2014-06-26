@@ -29,13 +29,13 @@ import android.util.Log;
 
 public class Kernel implements Runnable {
 
-	public boolean allOnBoot;
-	public boolean allOnMonitor;
-
 	private static final String SWITCH_USER = "su";
 	private static final String EXIT_SHELL = "exit $?";
 
 	private final int state;
+	
+	private boolean allOnBoot;
+	private boolean allOnMonitor;
 
 	private String cacheSize;
 	private ArrayList<MmcModell> list;
@@ -75,6 +75,22 @@ public class Kernel implements Runnable {
 		} else {
 			Utils.sendMessage(handler, 0, result, 0, null);
 		}
+	}
+
+	public boolean isAllOnBoot() {
+		return allOnBoot;
+	}
+
+	public void setAllOnBoot(boolean allOnBoot) {
+		this.allOnBoot = allOnBoot;
+	}
+
+	public boolean isAllOnMonitor() {
+		return allOnMonitor;
+	}
+
+	public void setAllOnMonitor(boolean allOnMonitor) {
+		this.allOnMonitor = allOnMonitor;
 	}
 
 	public void setCacheSize(String size) {

@@ -324,8 +324,8 @@ public class Mmc implements Runnable {
 	
 	public void setToKernel(int cacheSize) {
 
-		kernel.allOnBoot = false;
-		kernel.allOnMonitor = false;
+		kernel.setAllOnBoot(false);
+		kernel.setAllOnMonitor(false);
 		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
@@ -335,8 +335,8 @@ public class Mmc implements Runnable {
 
 	public void setToKernel(int cacheSize, boolean allOnBoot) {
 
-		kernel.allOnBoot = allOnBoot;
-		kernel.allOnMonitor = false;
+		kernel.setAllOnBoot(allOnBoot);
+		kernel.setAllOnMonitor(false);
 		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
@@ -346,8 +346,8 @@ public class Mmc implements Runnable {
 
 	public void monitorToKernel(int cacheSize, boolean allOnMonitor) {
 
-		kernel.allOnBoot = false;
-		kernel.allOnMonitor = allOnMonitor;
+		kernel.setAllOnBoot(false);
+		kernel.setAllOnMonitor(allOnMonitor);
 		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 
@@ -358,8 +358,8 @@ public class Mmc implements Runnable {
 	public void changeToKernel(int cacheSize, boolean allOnMonitor,
 			boolean allOnBoot) {
 
-		kernel.allOnBoot = allOnBoot;
-		kernel.allOnMonitor = allOnMonitor;
+		kernel.setAllOnBoot(allOnBoot);
+		kernel.setAllOnMonitor(allOnMonitor);
 		kernel.setArrayList(mmcList);
 		kernel.setCacheSize(String.valueOf(cacheSize));
 

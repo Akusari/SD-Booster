@@ -220,7 +220,6 @@ public class SDbooster extends Activity {
 						showMessage(1, null);
 					} else if (msg.arg2 == 1) {
 						showMessage(3, null);
-
 					} else if (msg.arg2 == 2) {
 
 						// all ok
@@ -359,6 +358,7 @@ public class SDbooster extends Activity {
 					// App exit
 
 					finish();
+					
 				} else if (msg.arg1 == 3) {
 
 					if (msg.arg2 == 0) {
