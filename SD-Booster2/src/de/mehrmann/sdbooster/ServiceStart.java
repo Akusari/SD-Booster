@@ -288,8 +288,8 @@ public class ServiceStart extends Service {
 		
 		// prevent concurrent access
 		
-		if (!this.lock) {
-			this.lock = true;
+		if (!lock) {
+			lock = true;
 		} else {
 			Log.e(Utils.TAG, "updateDbToModell(): lock found!");
 			return;
@@ -302,7 +302,7 @@ public class ServiceStart extends Service {
 		
 		if (mmcList == null || mmcList.size() == 0) {
 			Log.e(Utils.TAG, getString(R.string.msg_error_no_card));
-			this.lock = false;
+			lock = false;
 			return;
 		}
 
@@ -349,7 +349,7 @@ public class ServiceStart extends Service {
 			}
 		}
 		
-		this.lock = false;
+		lock = false;
 	}
 
 	private void setOnBoot() {
