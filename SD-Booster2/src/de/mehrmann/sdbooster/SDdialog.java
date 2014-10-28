@@ -328,34 +328,51 @@ public class SDdialog extends Dialog {
 					boolean onBoot = false;
 					boolean onMonitor = false;
 					boolean onSize = false;
+					
 					String size = cardCacheEdit.getText().toString();
-
-					if (size.length() != 0) {
-
-						if (!Utils.containOnlyNumbers(size)
-								|| !Utils.cacheSizeIsOk(size)) {
-
-							Toast.makeText(
-									context,
-									resources
-											.getString(R.string.dlg_setup_cache_size_error),
+					
+					if ((cardOnBoot.isChecked() || cardOnMonitor.isChecked())) {	
+						if (size.length() != 0 && (!Utils.containOnlyNumbers(size)
+								|| !Utils.cacheSizeIsOk(size))) {
+							
+							Toast.makeText(context, resources
+									.getString(R.string.dlg_setup_cache_size_error),
 									Toast.LENGTH_SHORT).show();
 							return;
+							
+						} else if (size.length() == 0 && !Utils.cacheSizeIsOk(card.getAheadUser())) {
+							
+							Toast.makeText(context, resources
+									.getString(R.string.dlg_setup_cache_size_error),
+									Toast.LENGTH_SHORT).show();
+							return;
+							
 						}
-
-						int value = Integer.valueOf(size);
-						value = Utils.alignValue(value);
-
-						card.setAheadUser(String.valueOf(value));
-						card.setSetup(true);
-						onSize = true;
-
-						InputMethodManager inputManager = (InputMethodManager) context
-								.getSystemService(Service.INPUT_METHOD_SERVICE);
-
-						inputManager.hideSoftInputFromWindow(
-								cardCacheEdit.getWindowToken(), 0);
+						
 					}
+
+					if (size.length() > 0) {
+						if (Utils.containOnlyNumbers(size) && Utils.cacheSizeIsOk(size)) {		
+							int value = Integer.valueOf(size);
+							value = Utils.alignValue(value);
+	
+							card.setAheadUser(String.valueOf(value));
+							card.setSetup(true);
+							onSize = true;	
+						} else {
+							Toast.makeText(context, resources
+									.getString(R.string.dlg_setup_cache_size_error),
+									Toast.LENGTH_SHORT).show();
+							return;		
+						}
+					}
+					
+					InputMethodManager inputManager = (InputMethodManager) context
+							.getSystemService(Service.INPUT_METHOD_SERVICE);
+
+					inputManager.hideSoftInputFromWindow(
+							cardCacheEdit.getWindowToken(), 0);
+
 
 					if (cardOnBoot.isChecked() != cardOnBootState) {
 						card.setOnBoot(cardOnBoot.isChecked());
