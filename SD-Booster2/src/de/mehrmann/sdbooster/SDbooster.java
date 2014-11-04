@@ -632,8 +632,11 @@ public class SDbooster extends Activity {
 		MmcModell dbCard;
 		Database db = getDbInstance();
 		adapter.clear();
+		
+		ArrayList<MmcModell> list = cards.getList();
+		if (list == null || list.size() == 0) return;
 
-		for (MmcModell card : cards.getList()) {
+		for (MmcModell card : list) {
 
 			if (!db.cardExist(card)) {
 				card.setId(db.cardInsert(card));
