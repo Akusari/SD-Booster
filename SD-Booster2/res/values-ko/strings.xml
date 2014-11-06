@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright (C) 2013  Daniel Mehrmann (Akusari)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+	<string name="app_name">SD-Booster</string>
+	<string name="app_author">버전 2.0.7 © Daniel Mehrmann</string>
+	<string name="app_design">아이콘 디자인 - Jozef Kruszynski</string>
+	<string name="menu_settings">설정</string>
+	<string name="cbox_boot_all">부팅시 설정값 적용(모두)</string>
+	<string name="cbox_boot_card">부팅시 설정값 적용(이 항목)</string>
+	<string name="cbox_monitor_all">모든 항목 모니터링</string>
+	<string name="cbox_monitor_card">현재 항목 모니터링</string>
+	<string name="cbox_size_all">모든항목에 동일한 캐시값 적용:</string>
+	<string name="card_part_label">크기:</string>
+	<string name="card_cache_label">캐시:</string>
+	<string name="card_size_label">가상</string>
+	<string name="msg_error_no_card">sd카드를 찾지 못했습니다.</string>
+	<string name="msg_error_no_root">루트 권한을 찾지 못했습니다.</string>
+	<string name="msg_error_no_setup">캐시값을 찾지 못했습니다. 기기 상태를 확인해주세요.</string>
+	<string name="msg_error_no_card_list">sd카드가 없습니다!</string>
+	<string name="msg_error_no_cache_all">발견 된 모든 장치에 대한 캐시 값 없음</string>
+	<string name="msg_all_ok">모든 캐시값이 정상적으로 적용되었습니다.</string>
+	<string name="msg_box_override_enable">이 옵션은 sd카드의 기본설정값을 대체합니다.</string>
+	<string name="msg_box_override_disable">기능 비활성화</string>
+	<string name="msg_kernel_cache_p1">캐시값이</string>
+	<string name="msg_kernel_cache_p2">에서</string>
+	<string name="msg_kernel_cache_p3">성공적으로 적용</string>
+	<string name="msg_kernel_cache_p4">적용 실패</string>
+	<string name="msg_kernel_device_skip_p1">기기(카드)가</string>
+	<string name="msg_kernel_device_skip_p2">스킵됨</string>
+	<string name="msg_service_start">서비스가 시작되었습니다.</string>
+	<string name="msg_service_stop">서비스가 중지되었습니다.</string>
+	<string name="msg_service_ticker_new">새로운 카드가 발견되었습니다. 카드를 설정해주세요.</string>
+	<string name="msg_service_ticker_monitor_p1">기기(카드)가</string>
+	<string name="msg_service_ticker_monitor_p2">다음 값으로 성공적으로 설정되었습니다.</string>
+	<string name="msg_service_ticker_value_p1">기기(카드)가</string>
+	<string name="msg_service_ticker_value_p2">관리되고 있지 않습니다.</string>
+	<string name="msg_new_card">새로운 기기(카드)이며 현재 관리되고 있지 않습니다.</string>
+	<string name="edit_hint_label">KB</string>
+	<string name="dlg_license_label">라이센스</string>
+	<string name="dlg_license_text">SD-Booster는 이 어플을 사용함으로써 생기는 기기적 문제에 대해 책임을 지지 않습니다.\nSD-Booster를 실행하기 위해서는 루트 권한이 필요합니다!\n동의하신다면 OK버튼을 눌러 진행하시고, 동의하지 않으신다면 cancel버튼을 눌러 어플리케이션을 종료하십시오.</string>
+	<string name="dlg_info_label">정보</string>
+	<string name="dlg_test_no_mount">SD-Card가 마운트되어있지 않습니다.</string>
+	<string name="dlg_card_info_name_label">이름:</string>
+	<string name="dlg_card_info_part_label">크기:</string>
+	<string name="dlg_card_info_cache_label">캐시:</string>
+	<string name="dlg_card_info_date_label">날짜:</string>
+	<string name="dlg_card_info_serial_label">시리얼:</string>
+	<string name="dlg_card_info_unknown_label">알 수없는</string>
+	<string name="dlg_setup_label">설치</string>
+	<string name="dlg_setup_name_label">이름:</string>
+	<string name="dlg_setup_cache_label">캐시 크기 (현재크기/유저 설정값):</string>
+	<string name="dlg_setup_cache_edit_label">캐시 크기 설정:</string>
+	<string name="dlg_setup_cache_size_error">캐시 값은128 에서 8192까지 설정할 수 있습니다.</string>
+	<string name="dlg_setup_text">캐시 값을 128 에서 8192사이로 설정하세요. 권장 설정값은 1024 혹은 2048입니다.</string>
+	<string name="dlg_progress_label">속도 테스트</string>
+	<string name="dlg_progress_text">테스트가 진행중입니다. 잠시 기다려주십시오…</string>
+	<string name="dlg_preference_label">설정</string>
+	<string name="dlg_preference_store">설정값이 저장됨</string>
+	<string name="dlg_preference_background">백그라운드 실행과 노티 알림</string>
+	<string name="dlg_preference_interval">업데이트 주기 (시간 단위):</string>
+	<string name="dlg_preference_note_boot">부팅시 노티 알림</string>
+	<string name="dlg_preference_note_monitor">모니터링시 노티 알림</string>
+	<string name="dlg_preference_note_change">상태 변경시 노티 알림</string>
+	<string name="dlg_preference_note_alarm">노티 알림이 있을시 소리 알림</string>
+	<string name="dlg_preference_note_ringtone">알림음 선택:</string>
+</resources>
