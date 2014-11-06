@@ -33,7 +33,7 @@
 	<string name="msg_error_no_root">SD-Booster non ha il permesso di root</string>
 	<string name="msg_error_no_setup">Nessun valore di cache trovato. Si prega di configurare i vostri dispositivi</string>
 	<string name="msg_error_no_card_list">Non trovate cards!</string>
-	<string name="msg_error_no_cache_all">"Nessun valore cache per tutti i dispositivi trovati"</string>
+	<string name="msg_error_no_cache_all">Nessun valore cache per tutti i dispositivi trovati</string>
 	<string name="msg_all_ok">Tutti i valori di cache aggiornate con successo</string>
 	<string name="msg_box_override_enable">Questa opzione ignora le impostazioni della scheda</string>
 	<string name="msg_box_override_disable">Funzione disabilitata</string>
