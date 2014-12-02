@@ -835,7 +835,7 @@ public class SDbooster extends Activity {
 			text.append("Mounts:\n");
 			
 			for (String line : mount) {
-				text.append(line);
+				text.append(line + "\n");
 			}
 		}
 
